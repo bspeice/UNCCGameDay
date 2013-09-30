@@ -1,4 +1,6 @@
-package com.uncc.gameday;
+package com.uncc.gameday.activities;
+
+import com.uncc.gameday.R;
 
 import android.os.Bundle;
 import android.app.Activity;

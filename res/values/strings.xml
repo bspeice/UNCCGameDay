@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">UNCCGameDay</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="action_alert_settings">Alert Settings</string>
+    <string name="hello_world">Welcome to UNCC GameDay!</string>
 
 </resources>

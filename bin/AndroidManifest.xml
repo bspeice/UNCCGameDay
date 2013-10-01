@@ -16,6 +16,18 @@
         <activity
             android:name="com.uncc.gameday.activities.Alerts"
             android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.uncc.gameday.activities.Parking"
+            android:label="@string/title_activity_parking" >
+        </activity>
+        <activity
+            android:name="com.uncc.gameday.activities.Registration"
+            android:label="@string/title_activity_registration" >
+        </activity>
+        <activity
+            android:name="com.uncc.gameday.activities.Home"
+            android:label="@string/title_activity_home" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

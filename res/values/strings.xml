@@ -4,5 +4,8 @@
     <string name="app_name">UNCCGameDay</string>
     <string name="action_alert_settings">Alert Settings</string>
     <string name="hello_world">Welcome to UNCC GameDay!</string>
+    <string name="title_activity_parking">Parking</string>
+    <string name="title_activity_registration">Registration</string>
+    <string name="title_activity_home">Home</string>
 
 </resources>

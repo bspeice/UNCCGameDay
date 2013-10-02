@@ -6,7 +6,9 @@ import com.uncc.gameday.R.menu;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 
 public class Home extends Activity {
 
@@ -22,5 +24,14 @@ public class Home extends Activity {
 		getMenuInflater().inflate(R.menu.home, menu);
 		return true;
 	}
+	
+	@Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	switch (item.getItemId()){
+    		case R.id.action_alert_settings:
+    			startActivity(new Intent(this, Alerts.class));
+    	}
+		return true;
+    }
 
 }

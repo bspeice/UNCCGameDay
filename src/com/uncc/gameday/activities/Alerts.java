@@ -4,7 +4,9 @@ import com.uncc.gameday.R;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 
 public class Alerts extends Activity {
 
@@ -22,4 +24,12 @@ public class Alerts extends Activity {
         return true;
     }
     
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	switch (item.getItemId()){
+    		case R.id.action_alert_settings:
+    			startActivity(new Intent(this, Alerts.class));
+    	}
+		return true;
+    }
 }

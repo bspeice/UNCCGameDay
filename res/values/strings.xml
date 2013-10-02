@@ -6,6 +6,6 @@
     <string name="hello_world">Welcome to UNCC GameDay!</string>
     <string name="title_activity_parking">Parking</string>
     <string name="title_activity_registration">Registration</string>
-    <string name="title_activity_home">Home</string>
+    <string name="title_activity_alerts">Alerts</string>
 
 </resources>

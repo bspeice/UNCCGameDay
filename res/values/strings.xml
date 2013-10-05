@@ -11,5 +11,6 @@
     <string name="alerts_check_timed">Timed (Reserve Ticket...)</string>
     <string name="alerts_check_organizations">Organizations</string>
     <string name="alerts_check_university">University</string>
+    <string name="home_label_recent_alerts">Recent Alerts:</string>
 
 </resources>

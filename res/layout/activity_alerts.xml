@@ -1,16 +1,34 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".Alerts" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
 
     <TextView
+        android:id="@+id/alerts_label_alerts_to_receive"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="@string/alerts_label_alerts_to_receive"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-</RelativeLayout>
+    <CheckBox
+        android:id="@+id/alerts_check_timed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alerts_check_timed"
+        android:onClick="onClickTimedAlerts" />
+
+    <CheckBox
+        android:id="@+id/alerts_check_organizations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alerts_check_organizations"
+        android:onClick="onClickOrganizationAlerts" />
+
+    <CheckBox
+        android:id="@+id/alerts_check_university"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alerts_check_university"
+        android:onClick="onClickUniversityAlerts" />
+
+</LinearLayout>

@@ -14,5 +14,6 @@
     <string name="home_label_recent_alerts">Recent Alerts:</string>
     <string name="gameday_handle">UNCCGameDay</string>
     <string name="university_handle">unccharlotte</string>
+    <string name="db_path">Gameday.sqlite</string>
 
 </resources>

@@ -9,6 +9,7 @@ import twitter4j.Twitter;
 import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.widget.Toast;
 
 import com.uncc.gameday.R;
@@ -19,24 +20,24 @@ public class AlertFetcher {
 	private int maxTweets = 5;
 	
 	public void fetchAlerts(Context ctx) {
-		/* This method needs to be re-written to use better logic. */
-		
-		/*
 		// Fetch all alerts. Responsible for discovering what sources need to be fetched.
 		
-		if (((CheckBox)findViewById(R.id.alerts_check_timed)).isChecked())
+		// Note we have to use the SharedPreferences so that we have preferences no matter what activity
+		// sent us this context
+		SharedPreferences settings = ctx.getSharedPreferences(ctx.getString(R.string.preferences_file), 0); // MODE_PRIVATE
+		
+		if (settings.getBoolean("ALERT_TIMED", false))
 			// Fetch timed alerts
-			this.fetchTimedAlerts();
-		else if (((CheckBox)findViewById(R.id.alerts_check_organizations)).isChecked())
+			this.fetchTimedAlerts(ctx);
+		else if (settings.getBoolean("ALERT_ORGANIZATION", false))
 			// Fetch organization alerts
-			this.fetchOrganizationAlerts();
-		else if (((CheckBox)findViewById(R.id.alerts_check_university)).isChecked())
+			this.fetchOrganizationAlerts(ctx);
+		else if (settings.getBoolean("ALERT_UNIVERSITY", false))
 			// Fetch university alerts
-			this.fetchUniversityAlerts();
+			this.fetchUniversityAlerts(ctx);
 		
 		// And always fetch alerts made by us. Period.
-		this.fetchGamedayAlerts();
-		*/
+		this.fetchGamedayAlerts(ctx);
 	}
 	
 	private void fetchTimedAlerts(Context ctx) {

@@ -6,6 +6,7 @@ public class Alert {
 	
 	private Date alarmDate;
 	private String message;
+	private boolean shown;
 	
 	public Date getAlarmDate() {
 		return alarmDate;
@@ -19,6 +20,12 @@ public class Alert {
 	}
 	public void setMessage(String message) {
 		this.message = message;
+	}
+	public boolean isShown() {
+		return shown;
+	}
+	public void setShown(boolean shown) {
+		this.shown = shown;
 	}
 
 }

@@ -15,5 +15,6 @@
     <string name="gameday_handle">UNCCGameDay</string>
     <string name="university_handle">unccharlotte</string>
     <string name="db_path">Gameday.sqlite</string>
+    <string name="preferences_file">GamedayPreferences</string>
 
 </resources>

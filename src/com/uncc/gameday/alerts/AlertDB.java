@@ -19,19 +19,9 @@ public class AlertDB {
 	public void insertAlert(Alert alert) {
 		// Add a new date to the database
 	}
-	
-	public void insertAlertRead(Alert alert) {
-		// Add a new date to the database that should not be alerted.
-		// This way, you can display it in the recent alerts list, but
-		// not show it to the user.
-	}
-	
+
 	public void insertAlerts(List<Alert> alarmDates) {
 		// Add multiple new dates to the database
-	}
-	
-	public void insertAlertsRead(List<Alert> alarmDates) {
-		// Add multiple new dates to the database, and mark them as read.
 	}
 	
 	public List<Alert> fetchUnreadAlerts() {

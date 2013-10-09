@@ -24,10 +24,11 @@ public class AlertDB {
 		// Add multiple new dates to the database
 	}
 	
-	public List<Alert> fetchUnreadAlerts() {
-		// Get a list of all currently unread alerts
-		
-		return null;
+	public void deleteAlert(Alert alert) {
+		// Remove a date from the database
 	}
 	
+	public void deleteAlerts(List<Alert> alerts) {
+		// Remove multiple dates from the database
+	}
 }

@@ -1,6 +1,11 @@
 package com.uncc.gameday.alerts;
 
+import java.util.List;
+
+import com.uncc.gameday.GameDay;
+
 import android.app.IntentService;
+import android.content.Context;
 import android.content.Intent;
 
 public class AlertService extends IntentService {
@@ -13,6 +18,14 @@ public class AlertService extends IntentService {
 	@Override
 	protected void onHandleIntent(Intent intent) {
 		// Go fetch all the alerts!
+		Context appContext = GameDay.getAppContext();
+		AlertDB dbHandle = new AlertDB();
+		List<Alert> alerts = dbHandle.fetchUnread();
+		
+		// And then display all of them!
+		for (Alert a: alerts) {
+			a.displayNotification(appContext);
+		}
 	}
 
 }

@@ -31,4 +31,9 @@ public class AlertDB {
 	public void deleteAlerts(List<Alert> alerts) {
 		// Remove multiple dates from the database
 	}
+	
+	public List<Alert> fetchUnread() {
+		// Fetch all unread alerts
+		return null;
+	}
 }

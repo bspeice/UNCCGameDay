@@ -5,6 +5,7 @@ import java.util.Date;
 import com.uncc.gameday.R;
 import com.uncc.gameday.activities.Home;
 
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -60,7 +61,7 @@ public class Alert {
 		builder.setContentIntent(resultPendingIntent);
 		
 		NotificationManager notificationManager = (NotificationManager) ctx.getSystemService(Context.NOTIFICATION_SERVICE);
-		notificationManager.notify(0, builder.build());
+		notificationManager.notify(0, builder.setAutoCancel(true).build());
 	}
 
 }

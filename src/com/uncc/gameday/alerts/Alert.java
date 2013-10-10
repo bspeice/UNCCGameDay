@@ -18,13 +18,21 @@ public class Alert {
 	private String message;
 	private boolean shown;
 	
+	// Default constructor
+	public Alert(){}
+	
+	public Alert(Date alarmDate, String message, boolean shown) {
+		this.setAlarmDate(alarmDate);
+		this.setMessage(message);
+		this.setShown(shown);
+	}
+	
 	public Date getAlarmDate() {
 		return alarmDate;
 	}
 	public void setAlarmDate(Date alarmDate) {
 		this.alarmDate = alarmDate;
 	}
-	
 	public String getMessage() {
 		return message;
 	}

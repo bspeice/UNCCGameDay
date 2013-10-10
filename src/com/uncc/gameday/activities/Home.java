@@ -1,5 +1,7 @@
 package com.uncc.gameday.activities;
 
+import java.util.Date;
+
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -9,7 +11,7 @@ import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 
 import com.uncc.gameday.R;
-import com.uncc.gameday.alerts.AlertFetcher;
+import com.uncc.gameday.alerts.Alert;
 import com.uncc.gameday.alerts.AlertService;
 
 public class Home extends MenuActivity {

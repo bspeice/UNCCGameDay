@@ -18,13 +18,12 @@ public class AlertService extends IntentService {
 	@Override
 	protected void onHandleIntent(Intent intent) {
 		// Go fetch all the alerts!
-		Context appContext = GameDay.getAppContext();
-		AlertDB dbHandle = new AlertDB();
-		List<Alert> alerts = dbHandle.fetchUnread();
+		new AlertFetcher().fetchAlerts(this);
+		List<Alert> alerts = new AlertDB().fetchUnread();
 		
 		// And then display all of them!
 		for (Alert a: alerts) {
-			a.displayNotification(appContext);
+			a.displayNotification(this);
 		}
 	}
 

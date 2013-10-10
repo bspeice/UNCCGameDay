@@ -49,7 +49,7 @@ public class Alert {
 	public void displayNotification(Context ctx) {
 		NotificationCompat.Builder builder = new NotificationCompat.Builder(ctx)
 			.setSmallIcon(R.drawable.ic_launcher)
-			.setContentTitle("GameDay Alert")
+			.setContentTitle(ctx.getString(R.string.app_name))
 			.setContentText(this.getMessage());
 		
 		Intent resultIntent = new Intent(ctx, Home.class);

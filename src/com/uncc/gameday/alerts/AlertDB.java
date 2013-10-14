@@ -1,39 +1,32 @@
 package com.uncc.gameday.alerts;
 
+import java.util.Date;
 import java.util.List;
 
-import android.database.sqlite.SQLiteDatabase;
-
-import com.uncc.gameday.GameDay;
-import com.uncc.gameday.R;
+/* Responsible for handling persistence/fetching of alerts */
 
 public class AlertDB {
-	
-	private SQLiteDatabase dbHandle;
-	private SQLiteDatabase.CursorFactory factory;
-	
-	public AlertDB() {
-		this.dbHandle = SQLiteDatabase.openOrCreateDatabase(GameDay.getAppContext().getString(R.string.db_path), factory);
-	}
-	
-	public void insertAlert(Alert alert) {
-		// Add a new date to the database
-	}
 
-	public void insertAlerts(List<Alert> alarmDates) {
-		// Add multiple new dates to the database
+	public void persist(Alert a) {
+		
 	}
 	
-	public void deleteAlert(Alert alert) {
-		// Remove a date from the database
+	public void persistMultiple(List<Alert> alerts) {
+		
 	}
 	
-	public void deleteAlerts(List<Alert> alerts) {
-		// Remove multiple dates from the database
+	public Alert fetch(Date d) {
+		
+		return null;
 	}
 	
-	public List<Alert> fetchUnread() {
-		// Fetch all unread alerts
+	public List<Alert> fetchMultiple(List<Date> dates) {
+		
+		return null;
+	}
+	
+	public List<Alert> fetchAll() {
+		
 		return null;
 	}
 }

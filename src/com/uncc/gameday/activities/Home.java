@@ -22,22 +22,20 @@ public class Home extends MenuActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
 		
-		Context ctx = getApplicationContext();
-		
 		// Start up the AlarmManager to fetch alerts in the background
 		AlarmManager am = (AlarmManager) this.getSystemService(ALARM_SERVICE);
 		Intent alertFetcher = new Intent(this, AlertService.class);
-		PendingIntent pendingAlertFetcher = PendingIntent.getService(ctx, 0, alertFetcher, 0);
+		PendingIntent pendingAlertFetcher = PendingIntent.getService(this, 0, alertFetcher, 0);
 		
 		// Cancel any previous alarm managers, and start the new one
 		am.cancel(pendingAlertFetcher);
 		am.setRepeating(0, this.alarmRate, this.alarmRate, pendingAlertFetcher);
 		
 		// Double check if we need to do any first-run code
-		this.onFirstRun(ctx);
+		this.onFirstRun();
 	}
 	
-	protected void onFirstRun(Context ctx) {
+	protected void onFirstRun() {
 		SharedPreferences settings = this.getPreferences(MODE_PRIVATE);
 		if (settings.getBoolean("FIRST_RUN", true)) {
 			// First run code

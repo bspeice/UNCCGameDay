@@ -29,4 +29,8 @@ public class AlertDB {
 		
 		return null;
 	}
+	
+	public List<Alert> fetchUnread() {
+		return null;
+	}
 }

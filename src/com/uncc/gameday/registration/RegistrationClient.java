@@ -24,6 +24,10 @@ public class RegistrationClient {
 		return gds.listLots();
 	}
 	
+	public ParkingLot listLot(ParkingLot lot) {
+		return gds.listLot(lot.location.getValue());
+	}
+	
 	public void rateLot(ParkingRating rating, ParkingChoices parkingLot) {
 		gds.rateLot(rating, parkingLot);
 	}

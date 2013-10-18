@@ -9,6 +9,9 @@ public interface GamedayService {
 	@GET("/lots/")
 	List<ParkingLot> listLots();
 	
+	@GET("/lots/{lot}/")
+	ParkingLot listLot(@Path("lot") String lot);
+	
 	@POST("/rating/")
 	void rateLot(@Body ParkingRating rating, @Body ParkingChoices parking_lot);
 

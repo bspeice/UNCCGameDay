@@ -21,12 +21,7 @@ public class RegistrationClient {
 	}
 	
 	public List<ParkingLot> listLots() {
-		try {
-			return gds.listLots();
-		} catch (RetrofitError e) {
-			Log.w("Registration.listLots()", e);
-			return null;
-		}
+		return gds.listLots();
 	}
 
 }

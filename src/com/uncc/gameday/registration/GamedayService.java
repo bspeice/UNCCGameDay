@@ -13,6 +13,6 @@ public interface GamedayService {
 	ParkingLot listLot(@Path("lot") String lot);
 	
 	@POST("/rating/")
-	void rateLot(@Body ParkingRating rating, @Body ParkingChoices parking_lot);
+	void rateLot(@Body RatingChoices rating, @Body ParkingChoices parking_lot);
 
 }

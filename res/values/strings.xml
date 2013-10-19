@@ -16,6 +16,6 @@
     <string name="university_handle">unccharlotte</string>
     <string name="db_path">Gameday.sqlite</string>
     <string name="preferences_file">GamedayPreferences</string>
-    <string name="server_hostname">uncc-gameday.no-ip.org</string>
+    <string name="server_hostname">10.0.1.12</string>
 
 </resources>

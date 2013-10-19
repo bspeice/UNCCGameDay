@@ -1,10 +1,10 @@
 package com.uncc.gameday.registration;
 
 public enum RatingChoices {
-	EMPTY ("EMP"),
-	SCATTERED ("SCT"),
-	BUSY ("BSY"),
-	FULL ("FLL");
+	EMP ("EMPTY"),
+	SCT ("SCATTERED"),
+	BSY ("BUSY"),
+	FLL ("FULL");
 	
 	String choice;
 	RatingChoices(String choice) { this.choice = choice; }

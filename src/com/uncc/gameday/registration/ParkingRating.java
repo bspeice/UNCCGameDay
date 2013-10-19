@@ -1,6 +1,6 @@
 package com.uncc.gameday.registration;
 
-public class ParkingRating {
+public class ParkingRating  {
 	private ParkingChoices parking_lot;
 	private RatingChoices rating;
 	

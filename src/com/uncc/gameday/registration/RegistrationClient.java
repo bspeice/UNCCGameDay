@@ -2,12 +2,11 @@ package com.uncc.gameday.registration;
 
 import java.util.List;
 
-import com.uncc.gameday.R;
-
-import android.content.Context;
-import android.util.Log;
 import retrofit.RestAdapter;
-import retrofit.RetrofitError;
+import retrofit.RestAdapter.LogLevel;
+import android.content.Context;
+
+import com.uncc.gameday.R;
 
 public class RegistrationClient {
 	
@@ -33,11 +32,14 @@ public class RegistrationClient {
 	}
 	
 	public void rateLot(RatingChoices rating, ParkingChoices parkingLot) {
-		gds.rateLot(rating, parkingLot);
+		ParkingRating pRating = new ParkingRating();
+		pRating.setParkingLot(parkingLot);
+		pRating.setRating(rating);
+		gds.rateLot(pRating, null);
 	}
 	
 	public void rateLot(ParkingRating rating) {
-		gds.rateLot(rating.getRating(), rating.getParkingLot());
+		gds.rateLot(rating, null);
 	}
 
 }

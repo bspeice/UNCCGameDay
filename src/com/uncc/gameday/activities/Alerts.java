@@ -1,6 +1,5 @@
 package com.uncc.gameday.activities;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;

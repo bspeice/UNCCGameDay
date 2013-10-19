@@ -1,17 +1,13 @@
 package com.uncc.gameday.activities;
 
-import java.util.Date;
-
 import android.app.AlarmManager;
 import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 
 import com.uncc.gameday.R;
-import com.uncc.gameday.alerts.Alert;
 import com.uncc.gameday.alerts.AlertService;
 
 public class Home extends MenuActivity {
@@ -44,11 +40,5 @@ public class Home extends MenuActivity {
 			editor.putBoolean("FIRST_RUN", false);
 			editor.commit();
 		}
-	}
-	
-	private void getRecentAlerts() {
-		// Responsible for discovering what the most recent alerts are and showing them.
-		// Likely should be implemented by querying a local DB of alerts, grabbing recent 20.
-		
 	}
 }

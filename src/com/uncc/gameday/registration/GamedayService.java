@@ -19,6 +19,9 @@ public interface GamedayService {
 	@GET("/register/{id}/")
 	Attendee getUser(@Query("id") int id);
 	
+	@GET("/register/{fname}/{lname}/")
+	Attendee getUser(@Query("fname") String firstName, @Query("lname") String lastName);
+	
 	@GET("/register/")
 	List<Attendee> getAllUsers();
 	

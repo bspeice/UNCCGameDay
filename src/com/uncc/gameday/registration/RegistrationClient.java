@@ -49,6 +49,10 @@ public class RegistrationClient {
 		return gds.getUser(id);
 	}
 	
+	public Attendee listAttendee(Attendee a) {
+		return gds.getUser(a.getFirstName(), a.getLastName());
+	}
+	
 	public List<Attendee> listAttendees() {
 		return gds.getAllUsers();
 	}

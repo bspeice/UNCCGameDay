@@ -2,10 +2,7 @@ package com.uncc.gameday.alerts;
 
 import java.util.List;
 
-import com.uncc.gameday.GameDay;
-
 import android.app.IntentService;
-import android.content.Context;
 import android.content.Intent;
 
 public class AlertService extends IntentService {

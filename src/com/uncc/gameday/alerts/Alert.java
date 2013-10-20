@@ -5,7 +5,6 @@ import java.util.Date;
 import com.uncc.gameday.R;
 import com.uncc.gameday.activities.Home;
 
-import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;

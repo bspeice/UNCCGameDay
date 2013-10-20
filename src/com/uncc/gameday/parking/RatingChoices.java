@@ -1,4 +1,4 @@
-package com.uncc.gameday.registration;
+package com.uncc.gameday.parking;
 
 public enum RatingChoices {
 	EMP ("EMPTY"),

@@ -1,6 +1,10 @@
-package com.uncc.gameday.registration;
+package com.uncc.gameday.rest;
 
 import java.util.List;
+
+import com.uncc.gameday.parking.ParkingLot;
+import com.uncc.gameday.parking.ParkingRating;
+import com.uncc.gameday.registration.Attendee;
 
 import retrofit.Callback;
 import retrofit.http.*;

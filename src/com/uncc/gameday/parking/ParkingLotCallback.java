@@ -1,4 +1,4 @@
-package com.uncc.gameday.registration;
+package com.uncc.gameday.parking;
 
 import android.util.Log;
 import retrofit.Callback;

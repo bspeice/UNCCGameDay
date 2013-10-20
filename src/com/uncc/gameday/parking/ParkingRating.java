@@ -1,4 +1,4 @@
-package com.uncc.gameday.registration;
+package com.uncc.gameday.parking;
 
 public class ParkingRating  {
 	private ParkingChoices parking_lot;

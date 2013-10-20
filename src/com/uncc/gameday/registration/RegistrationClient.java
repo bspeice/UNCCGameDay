@@ -42,4 +42,15 @@ public class RegistrationClient {
 		gds.rateLot(rating, new ParkingLotCallback());
 	}
 
+	public void registerAttendee(Attendee a) {
+		gds.registerUser(a, new AttendeeCallback());
+	}
+	
+	public Attendee listAttendee(Attendee a) {
+		return gds.getUser(a.getId());
+	}
+	
+	public List<Attendee> listAttendees() {
+		return gds.getAllUsers();
+	}
 }

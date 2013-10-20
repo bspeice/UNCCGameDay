@@ -35,11 +35,11 @@ public class RegistrationClient {
 		ParkingRating pRating = new ParkingRating();
 		pRating.setParkingLot(parkingLot);
 		pRating.setRating(rating);
-		gds.rateLot(pRating, null);
+		gds.rateLot(pRating, new ParkingLotCallback());
 	}
 	
 	public void rateLot(ParkingRating rating) {
-		gds.rateLot(rating, null);
+		gds.rateLot(rating, new ParkingLotCallback());
 	}
 
 }

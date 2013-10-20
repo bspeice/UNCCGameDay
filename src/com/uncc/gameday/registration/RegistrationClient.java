@@ -3,7 +3,6 @@ package com.uncc.gameday.registration;
 import java.util.List;
 
 import retrofit.RestAdapter;
-import retrofit.RestAdapter.LogLevel;
 import android.content.Context;
 
 import com.uncc.gameday.R;

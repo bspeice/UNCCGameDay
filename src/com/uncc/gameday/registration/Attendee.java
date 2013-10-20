@@ -1,21 +1,13 @@
 package com.uncc.gameday.registration;
 
-import java.util.Date;
-
 public class Attendee {
 	
-	private Date date_registered;
+	private int id;
 	private String first_name;
 	private String last_name;
 	private String section;
 	private int row;
 	
-	public Date getDate_registered() {
-		return date_registered;
-	}
-	public void setDate_registered(Date date_registered) {
-		this.date_registered = date_registered;
-	}
 	public String getFirst_name() {
 		return first_name;
 	}
@@ -39,6 +31,12 @@ public class Attendee {
 	}
 	public void setRow(int row) {
 		this.row = row;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 	

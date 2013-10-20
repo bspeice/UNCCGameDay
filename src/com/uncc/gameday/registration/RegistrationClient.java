@@ -45,8 +45,8 @@ public class RegistrationClient {
 		gds.registerUser(a, new AttendeeCallback());
 	}
 	
-	public Attendee listAttendee(Attendee a) {
-		return gds.getUser(a.getId());
+	public Attendee listAttendee(int id) {
+		return gds.getUser(id);
 	}
 	
 	public List<Attendee> listAttendees() {

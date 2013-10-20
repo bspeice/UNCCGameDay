@@ -15,5 +15,14 @@ public interface GamedayService {
 	
 	@POST("/rate/")
 	void rateLot(@Body ParkingRating p, Callback<ParkingLot> lot);
+	
+	@GET("/register/{id}/")
+	Attendee getUser(@Query("id") int id);
+	
+	@GET("/register/")
+	List<Attendee> getAllUsers();
+	
+	@POST("/register/")
+	void registerUser(@Body Attendee a, Callback<Attendee> attendee);
 
 }

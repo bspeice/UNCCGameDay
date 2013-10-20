@@ -17,10 +17,10 @@ public interface GamedayService {
 	void rateLot(@Body ParkingRating p, Callback<ParkingLot> lot);
 	
 	@GET("/register/{id}/")
-	Attendee getUser(@Query("id") int id);
+	Attendee getUser(@Path("id") int id);
 	
 	@GET("/register/{fname}/{lname}/")
-	Attendee getUser(@Query("fname") String firstName, @Query("lname") String lastName);
+	Attendee getUser(@Path("fname") String firstName, @Path("lname") String lastName);
 	
 	@GET("/register/")
 	List<Attendee> getAllUsers();

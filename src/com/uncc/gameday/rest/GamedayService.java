@@ -2,6 +2,7 @@ package com.uncc.gameday.rest;
 
 import java.util.List;
 
+import com.uncc.gameday.parking.ParkingLocation;
 import com.uncc.gameday.parking.ParkingLot;
 import com.uncc.gameday.parking.ParkingRating;
 import com.uncc.gameday.registration.Attendee;
@@ -19,6 +20,9 @@ public interface GamedayService {
 	
 	@POST("/lots/rate/")
 	void rateLot(@Body ParkingRating p, Callback<ParkingLot> lot);
+	
+	@GET("/lots/{lot}/")
+	ParkingLocation listLotLocation(@Path("lot") String lot);
 	
 	@GET("/register/{id}/")
 	Attendee getUser(@Path("id") int id);

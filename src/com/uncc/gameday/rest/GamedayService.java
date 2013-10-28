@@ -2,13 +2,16 @@ package com.uncc.gameday.rest;
 
 import java.util.List;
 
-import com.uncc.gameday.parking.ParkingLocation;
+import retrofit.Callback;
+import retrofit.http.Body;
+import retrofit.http.GET;
+import retrofit.http.POST;
+import retrofit.http.Path;
+
+import com.uncc.gameday.parking.ParkingCoordinate;
 import com.uncc.gameday.parking.ParkingLot;
 import com.uncc.gameday.parking.ParkingRating;
 import com.uncc.gameday.registration.Attendee;
-
-import retrofit.Callback;
-import retrofit.http.*;
 
 public interface GamedayService {
 	
@@ -22,7 +25,7 @@ public interface GamedayService {
 	void rateLot(@Body ParkingRating p, Callback<ParkingLot> lot);
 	
 	@GET("/lots/{lot}/")
-	ParkingLocation listLotLocation(@Path("lot") String lot);
+	ParkingCoordinate listLotLocation(@Path("lot") String lot);
 	
 	@GET("/register/{id}/")
 	Attendee getUser(@Path("id") int id);

@@ -44,17 +44,18 @@ public class ParkingClient {
 		gds.rateLot(rating, new ParkingLotCallback());
 	}
 	
-	public Map<ParkingLot, ParkingLocation> listLotLocation(ParkingLot p){
-		HashMap<ParkingLot, ParkingLocation> mMap = new HashMap<ParkingLot, ParkingLocation>();
-		mMap.put(p, gds.listLotLocation(p.getLocation().getValue()));
-		return mMap;
+	public ParkingLot listLotLocation(ParkingLot p){
+		ParkingCoordinate pc = gds.listLotLocation(p.getLocation().getValue());
+		p.setCoordinate(pc);
+		return p;
 	}
 	
-	public Map<ParkingLot, ParkingLocation> listLotLocation(ParkingChoice c) {
-		HashMap<ParkingLot, ParkingLocation> mMap = new HashMap<ParkingLot, ParkingLocation>();
-		ParkingLot mParkingLot = new ParkingLot();
-		mParkingLot.setLocation(c);
-		mMap.put(mParkingLot, gds.listLotLocation(c.getValue()));
-		return mMap;
+	public ParkingLot listLotLocation(ParkingChoice c) {
+		ParkingCoordinate pc = gds.listLotLocation(c.getValue());
+		ParkingLot pl = new ParkingLot();
+		pl.setLocation(c);
+		pl.setCoordinate(pc);
+		return pl;
 	}
+	
 }

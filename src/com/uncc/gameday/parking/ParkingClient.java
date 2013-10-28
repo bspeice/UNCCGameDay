@@ -25,7 +25,7 @@ public class ParkingClient {
 		return gds.listLots();
 	}
 	
-	public ParkingLot listLot(ParkingChoices choice) {
+	public ParkingLot listLot(ParkingChoice choice) {
 		return gds.listLot(choice.getValue());
 	}
 	
@@ -33,7 +33,7 @@ public class ParkingClient {
 		return gds.listLot(lot.getLocation().getValue());
 	}
 	
-	public void rateLot(RatingChoices rating, ParkingChoices parkingLot) {
+	public void rateLot(RatingChoices rating, ParkingChoice parkingLot) {
 		ParkingRating pRating = new ParkingRating();
 		pRating.setParkingLot(parkingLot);
 		pRating.setRating(rating);
@@ -50,7 +50,7 @@ public class ParkingClient {
 		return mMap;
 	}
 	
-	public Map<ParkingLot, ParkingLocation> listLotLocation(ParkingChoices c) {
+	public Map<ParkingLot, ParkingLocation> listLotLocation(ParkingChoice c) {
 		HashMap<ParkingLot, ParkingLocation> mMap = new HashMap<ParkingLot, ParkingLocation>();
 		ParkingLot mParkingLot = new ParkingLot();
 		mParkingLot.setLocation(c);

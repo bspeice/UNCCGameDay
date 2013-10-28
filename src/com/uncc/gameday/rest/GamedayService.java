@@ -17,7 +17,7 @@ public interface GamedayService {
 	@GET("/lots/{lot}/")
 	ParkingLot listLot(@Path("lot") String lot);
 	
-	@POST("/rate/")
+	@POST("/lots/rate/")
 	void rateLot(@Body ParkingRating p, Callback<ParkingLot> lot);
 	
 	@GET("/register/{id}/")

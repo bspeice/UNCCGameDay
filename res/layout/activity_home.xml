@@ -3,7 +3,7 @@
     android:id="@+id/TableLayout1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#f0ead6"
+    android:background="#daa520"
     tools:context=".Home" >
 
     <TableRow
@@ -26,14 +26,9 @@
         android:layout_marginLeft="@dimen/activity_vertical_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_weight="1"
-        android:background="@color/eggshell" >
-
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:stretchColumns="yes" >
-        </TableLayout>
+        android:background="@color/eggshell"
+        android:showDividers="end" >
+        
     </TableRow>
 
     
@@ -42,6 +37,7 @@
         android:id="@+id/clearAlertsbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_clear_alerts" />
+        android:text="@string/button_clear_alerts" 
+        android:textColor="@color/black" />
 
 </TableLayout>

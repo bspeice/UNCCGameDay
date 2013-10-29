@@ -30,7 +30,7 @@
     <string name="organization_comments">Comments:</string>
     <string name="registration_view_check_ins">View Check-In List</string>
     <string name="button_save">Save</string>
-    <string name="title_parking_selection">Please Select a Lot</string>
+    <string name="title_parking_selection">Please Select a Parking Lot</string>
     <string name="button_get_alerts">Get Alerts</string>
     <string name="select_university_alerts">University Alerts</string>
     <string name="select_organization_alerts">Organization Alerts</string>

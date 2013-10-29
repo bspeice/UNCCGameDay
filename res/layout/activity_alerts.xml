@@ -2,13 +2,14 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" 
-    android:background="#ffcc00">
+    android:background="#daa520">
 
     <TextView
         android:id="@+id/alerts_label_alerts_to_receive"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/alerts_label_alerts_to_receive"
+        android:textColor="@color/black" 
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <CheckBox
@@ -16,6 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/alerts_check_timed"
+        android:textColor="@color/black" 
         android:onClick="onClickTimedAlerts" />
 
     <CheckBox
@@ -23,6 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/alerts_check_organizations"
+        android:textColor="@color/black" 
         android:onClick="onClickOrganizationAlerts" />
 
     <CheckBox
@@ -30,6 +33,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/alerts_check_university"
+        android:textColor="@color/black" 
         android:onClick="onClickUniversityAlerts" />
+
+    <Button
+        android:id="@+id/getAlertsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black" 
+        android:text="@string/button_get_alerts" />
 
 </LinearLayout>

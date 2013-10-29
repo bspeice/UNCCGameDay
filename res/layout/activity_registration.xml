@@ -6,27 +6,18 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#f0ead6"
+    android:background="#daa520"
     tools:context=".Registration" >
-
-    <TextView
-        android:id="@+id/registrationTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="@string/title_activity_registration"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:id="@+id/studentName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/registrationTitle"
         android:layout_marginTop="26dp"
         android:text="@string/student_name"
         android:textAllCaps="false"
+        android:textColor="@color/black" 
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
@@ -36,6 +27,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/studentName"
         android:layout_marginTop="72dp"
+        android:textColor="@color/black" 
         android:text="@string/student_organization"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -47,6 +39,7 @@
         android:layout_below="@+id/studentOrganization"
         android:layout_marginTop="72dp"
         android:text="@string/section_number"
+        android:textColor="@color/black" 
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
@@ -57,6 +50,7 @@
         android:layout_below="@+id/sectionNumber"
         android:layout_marginTop="72dp"
         android:text="@string/row_number"
+        android:textColor="@color/black" 
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <EditText
@@ -104,6 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="18dp"
+        android:textColor="@color/black" 
         android:layout_toRightOf="@+id/checkBoxBroadcastInfo"
         android:text="@string/button_save" />
 
@@ -114,6 +109,7 @@
         android:layout_alignBaseline="@+id/buttonSave"
         android:layout_alignBottom="@+id/buttonSave"
         android:layout_alignParentLeft="true"
+        android:textColor="@color/black" 
         android:text="@string/check_box_broadcast" />
 
 </RelativeLayout>

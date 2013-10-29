@@ -3,7 +3,7 @@
     android:id="@+id/TableLayout1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#daa520"
+    android:background="#7d9a43"
     tools:context=".Home" >
 
     <TableRow

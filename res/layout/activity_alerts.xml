@@ -2,7 +2,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" 
-    android:background="#daa520">
+    android:background="#7d9a43">
 
     <TextView
         android:id="@+id/alerts_label_alerts_to_receive"

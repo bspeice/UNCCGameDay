@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">UNCCGameDay</string>
+    <string name="app_name">UNCC Game Day</string>
     <string name="action_alert_settings">Alert Settings</string>
     <string name="hello_world">Welcome to UNCC GameDay!</string>
     <string name="title_activity_parking">Parking</string>
@@ -9,13 +9,46 @@
     <string name="title_activity_alerts">Alerts</string>
     <string name="alerts_label_alerts_to_receive">Select Alerts to Receive:</string>
     <string name="alerts_check_timed">Timed (Reserve Ticket&#8230;)</string>
+    <string name="button_clear_alerts">Clear All Alerts</string>
     <string name="alerts_check_organizations">Organizations</string>
     <string name="alerts_check_university">University</string>
     <string name="home_label_recent_alerts">Recent Alerts:</string>
-    <string name="gameday_handle">UNCCGameDay</string>
+    <string name="gameday_handle">UNCC Game Day</string>
     <string name="university_handle">unccharlotte</string>
     <string name="db_path">Gameday.sqlite</string>
     <string name="preferences_file">GamedayPreferences</string>
-    <string name="server_hostname">uncc-gameday.no-ip.org</string>
+    <string name="server_hostname">uncc-gameday.no-ip.org</string> 
+    <string name="student_check_in">Student Check-In</string>
+    <string name="student_name">Student Name:</string>
+    <string name="student_organization">Organization:</string>
+    <string name="section_number">Section:</string>
+    <string name="row_number">Row:</string>
+    <string name="check_box_broadcast">Broadcast Information</string>
+    <string name="organization_check_in">Organization Name:</string>
+    <string name="organization_location">Location:</string>
+    <string name="organization_prizes">Prizes/Giveaways:</string>
+    <string name="organization_comments">Comments:</string>
+    <string name="registration_view_check_ins">View Check-In List</string>
+    <string name="button_save">Save</string>
+    <string name="title_parking_selection">Please Select a Lot</string>
+    <string name="button_get_alerts">Get Alerts</string>
+    <string name="select_university_alerts">University Alerts</string>
+    <string name="select_organization_alerts">Organization Alerts</string>
+    <string name="select_twitter_alerts">Twitter Alerts</string>
+    
+    <string name="black_lot">Black Lot</string>
+    <string name="green_lot">Green Lot</string>
+    <string name="red_lot">Red Lot</string>
+    <string name="blue_lot">Blue Lot</string>
+    <string name="silver_lot">Silver Lot</string>
+    <string name="orange_lot">Orange Lot</string>
+    <string name="yellow_lot">Yellow Lot</string>
+    <string name="puple_lot">Purple Lot</string>
+    <string name="pink_lot">Pink Lot</string>
+    <string name="white_lot">White Lot</string>
+    <string name="gold_lot">Gold Lot</string>
+        
+     
+    
 
 </resources>

@@ -1,41 +1,47 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/TableLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f0ead6"
     tools:context=".Home" >
 
-    <TextView
-        android:id="@+id/home_label_welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
-
-    <LinearLayout
-        android:id="@+id/home_layout_alerts_root"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/home_label_welcome"
-        android:layout_below="@+id/home_label_welcome"
-        android:orientation="vertical" >
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
         <TextView
-            android:id="@+id/home_label_recent_alerts"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/home_label_recent_alerts" />
-
-        <LinearLayout
-            android:id="@+id/home_layout_alerts"
+            android:id="@+id/recentAlertsTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:text="@string/home_label_recent_alerts"
+            android:textColor="@color/black" />
+    </TableRow>
 
-        </LinearLayout>
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_weight="1"
+        android:background="@color/eggshell" >
 
-    </LinearLayout>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:stretchColumns="yes" >
+        </TableLayout>
+    </TableRow>
 
-</RelativeLayout>
+    
+
+    <Button
+        android:id="@+id/clearAlertsbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_clear_alerts" />
+
+</TableLayout>

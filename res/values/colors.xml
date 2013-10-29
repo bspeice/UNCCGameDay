@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+ <color name="gold">#b8860b</color>
+ <color name="darkGreen">#006600</color>
+ <color name="green">#33ff00</color>
+ <color name="black">#000000</color>
+ <color name="red">#ff0000</color>
+ <color name="blue">#0066cc</color>
+ <color name="silver">#848482</color>
+ <color name="orange">#ff6600</color>
+ <color name="yellow">#ffff31</color>
+ <color name="purple">#8806ce</color>
+ <color name="pink">#ff3399</color>
+ <color name="white">#ffffff</color>
+ <color name="eggshell">#fffacd</color>
+ 
+ 
+ 
+
+</resources>
+
+

@@ -6,11 +6,138 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#f0ead6"
     tools:context=".Parking" >
 
     <TextView
+        android:id="@+id/textParking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/title_activity_parking"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textViewSelectLot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textParking"
+        android:layout_marginTop="21dp"
+        android:text="@string/title_parking_selection"
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <RadioButton
+        android:id="@+id/radioButtonGreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewSelectLot"
+        android:layout_marginTop="17dp"
+        android:textColor="@color/green"
+        android:text="@string/green_lot" />
+
+    <RadioButton
+        android:id="@+id/radioButtonBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/radioButtonGreen"
+        android:layout_alignBottom="@+id/radioButtonGreen"
+        android:layout_marginLeft="42dp"
+        android:layout_toRightOf="@+id/textViewSelectLot"
+        android:textColor="@color/black"
+        android:text="@string/black_lot" />
+
+    <RadioButton
+        android:id="@+id/radioButtonRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioButtonBlack"
+        android:layout_below="@+id/radioButtonBlack"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/red"
+        android:text="@string/red_lot" />
+
+    <RadioButton
+        android:id="@+id/radioButtonBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/radioButtonRed"
+        android:layout_alignBottom="@+id/radioButtonRed"
+        android:layout_alignRight="@+id/radioButtonGold"
+      	android:textColor="@color/blue"
+        android:text="@string/blue_lot" />
+
+    <RadioButton
+        android:id="@+id/radioButtonSilver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioButtonRed"
+        android:layout_below="@+id/radioButtonRed"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/silver"
+        android:text="@string/silver_lot" />
+
+    <RadioButton
+        android:id="@+id/radioButtonOrange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/radioButtonSilver"
+        android:layout_alignBottom="@+id/radioButtonSilver"
+        android:layout_alignLeft="@+id/radioButtonBlue"
+        android:textColor="@color/orange"
+        android:text="@string/orange_lot" />
+
+    <RadioButton
+        android:id="@+id/radioButtonYellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioButtonSilver"
+        android:layout_below="@+id/radioButtonSilver"
+        android:layout_marginTop="18dp"
+        android:textColor="@color/yellow"
+        android:text="@string/yellow_lot" />
+
+    <RadioButton
+        android:id="@+id/radioButtonPurple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/radioButtonYellow"
+        android:layout_alignBottom="@+id/radioButtonYellow"
+        android:layout_alignLeft="@+id/radioButtonOrange"
+        android:textColor="@color/purple"
+        android:text="@string/puple_lot" />
+
+    <RadioButton
+        android:id="@+id/radioButtonPink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioButtonYellow"
+        android:layout_below="@+id/radioButtonYellow"
+        android:layout_marginTop="18dp"
+        android:textColor="@color/pink"
+        android:text="@string/pink_lot" />
+
+    <RadioButton
+        android:id="@+id/radioButtonWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/radioButtonPink"
+        android:layout_alignBottom="@+id/radioButtonPink"
+        android:layout_alignLeft="@+id/radioButtonGold"
+        android:textColor="@color/white"
+        android:text="@string/white_lot" />
+
+    <RadioButton
+        android:id="@+id/radioButtonGold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioButtonGreen"
+        android:layout_below="@+id/radioButtonWhite"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/gold"
+        android:text="@string/gold_lot" />
 
 </RelativeLayout>

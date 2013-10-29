@@ -1,6 +1,8 @@
 package com.uncc.gameday.parking;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import retrofit.RestAdapter;
 import android.content.Context;
@@ -23,7 +25,7 @@ public class ParkingClient {
 		return gds.listLots();
 	}
 	
-	public ParkingLot listLot(ParkingChoices choice) {
+	public ParkingLot listLot(ParkingChoice choice) {
 		return gds.listLot(choice.getValue());
 	}
 	
@@ -31,7 +33,7 @@ public class ParkingClient {
 		return gds.listLot(lot.getLocation().getValue());
 	}
 	
-	public void rateLot(RatingChoices rating, ParkingChoices parkingLot) {
+	public void rateLot(RatingChoices rating, ParkingChoice parkingLot) {
 		ParkingRating pRating = new ParkingRating();
 		pRating.setParkingLot(parkingLot);
 		pRating.setRating(rating);
@@ -41,4 +43,19 @@ public class ParkingClient {
 	public void rateLot(ParkingRating rating) {
 		gds.rateLot(rating, new ParkingLotCallback());
 	}
+	
+	public ParkingLot listLotLocation(ParkingLot p){
+		ParkingCoordinate pc = gds.listLotLocation(p.getLocation().getValue());
+		p.setCoordinate(pc);
+		return p;
+	}
+	
+	public ParkingLot listLotLocation(ParkingChoice c) {
+		ParkingCoordinate pc = gds.listLotLocation(c.getValue());
+		ParkingLot pl = new ParkingLot();
+		pl.setLocation(c);
+		pl.setCoordinate(pc);
+		return pl;
+	}
+	
 }

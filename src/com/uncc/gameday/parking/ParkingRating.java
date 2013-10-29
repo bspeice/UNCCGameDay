@@ -1,13 +1,13 @@
 package com.uncc.gameday.parking;
 
 public class ParkingRating  {
-	private ParkingChoices parking_lot;
+	private ParkingChoice parking_lot;
 	private RatingChoices rating;
 	
-	public ParkingChoices getParkingLot() {
+	public ParkingChoice getParkingLot() {
 		return parking_lot;
 	}
-	public void setParkingLot(ParkingChoices parking_lot) {
+	public void setParkingLot(ParkingChoice parking_lot) {
 		this.parking_lot = parking_lot;
 	}
 	public RatingChoices getRating() {

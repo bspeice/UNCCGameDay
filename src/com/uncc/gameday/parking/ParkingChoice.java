@@ -1,6 +1,6 @@
 package com.uncc.gameday.parking;
 
-public enum ParkingChoices {
+public enum ParkingChoice {
 	GREEN ("GREEN"),
 	BLACK ("BLACK"),
 	RED ("RED"),
@@ -14,6 +14,6 @@ public enum ParkingChoices {
 	GOLD ("GOLD");
 	
 	String choice;
-	ParkingChoices(String choice) { this.choice = choice; }
+	ParkingChoice(String choice) { this.choice = choice; }
 	public String getValue() { return choice; }
 }

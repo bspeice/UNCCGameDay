@@ -6,18 +6,15 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.TableLayout;
+
+
 
 import com.uncc.gameday.R;
 import com.uncc.gameday.alerts.AlertService;
 
 public class Home extends MenuActivity {
-	
-	private TableLayout alertsScrollView;
-	
-	Button clearAlertsButton;
-	Button getAlertsButton;
+		
+
 	
 	private final long alarmRate = 300000; // 5 Minutes
 	
@@ -25,17 +22,7 @@ public class Home extends MenuActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
 		
-		alertsScrollView = (TableLayout) findViewById(R.id.alertsScrollView);
 		
-		clearAlertsButton = (Button) findViewById(R.id.clearAlertsButton);
-		getAlertsButton = (Button) findViewById(R.id.getAlertsButton);
-		
-		clearAlertsButton.setOnClickListener(clearAlertsButtonListener);
-		getAlertsButton.setOnClickListener(getAlertsButtonListener);
-		
-		updateAlertsList(null);
-	
-	
 		
 		// Start up the AlarmManager to fetch alerts in the background
 		AlarmManager am = (AlarmManager) this.getSystemService(ALARM_SERVICE);

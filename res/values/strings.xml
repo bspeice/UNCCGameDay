@@ -47,7 +47,8 @@
     <string name="pink_lot">Pink Lot</string>
     <string name="white_lot">White Lot</string>
     <string name="gold_lot">Gold Lot</string>
-    
+    <string name="title_enter_location">Enter a city:</string>
+
     <string name="button_clear_parking_choices">Clear Selections</string>
     <string name="button_get_lot_info">Get Parking Info</string>
         

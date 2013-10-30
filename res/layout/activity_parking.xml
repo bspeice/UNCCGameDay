@@ -33,9 +33,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/puple_lot"
-        android:textColor="@color/black" />
- 
-    
+        android:textColor="@color/black"
+        android1:textColorLink="@color/pressed_unccgameday" />
    
     <RadioButton
         android1:id="@+id/radioButtonGreen"
@@ -116,7 +115,7 @@
     android1:layout_alignParentBottom="true"
     android1:layout_centerHorizontal="true"
     android:textColor="@color/black"
-    android1:gravity="bottom|center_horizontal"
-    android1:text="@string/button_get_lot_info" />
+    android1:text="@string/button_get_lot_info"
+    android1:textColorLink="@color/pressed_unccgameday" />
 
 </RelativeLayout>

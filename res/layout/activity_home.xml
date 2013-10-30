@@ -17,6 +17,7 @@
             android:layout_height="wrap_content"
             android:text="@string/home_label_recent_alerts"
             android:textColor="@color/black" />
+ 
     </TableRow>
 
     <TableRow
@@ -26,18 +27,38 @@
         android:layout_marginLeft="@dimen/activity_vertical_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_weight="1"
-        android:background="@color/eggshell"
-        android:showDividers="end" >
-        
+        android:background="@color/eggshell">
+ 	<requestFocus/>
+
+ 	<ListView
+ 	    android:id="@+id/alertsListView"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_weight="1"
+ 	    android:background="@android:color/transparent" >
+
+ 	</ListView>
+ 
+      </TableRow>
+      
+     
+      <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+         <Button
+             android:id="@+id/clearAlertsButton"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_span="2"
+             android:layout_weight="1"
+             android:text="@string/button_clear_alerts"
+             android:textColor="@color/black" />
+    
     </TableRow>
 
-    
-
-    <Button
-        android:id="@+id/clearAlertsbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_clear_alerts" 
-        android:textColor="@color/black" />
-
 </TableLayout>
+

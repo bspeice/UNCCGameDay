@@ -60,7 +60,9 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/studentName"
         android:ems="10"
-        android:inputType="textPersonName" >
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textColorLink="@color/black" >
 
         <requestFocus />
     </EditText>
@@ -72,7 +74,9 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/studentOrganization"
         android:ems="10"
-        android:inputType="text" />
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
 
     <EditText
         android:id="@+id/editSectionNumber"
@@ -81,7 +85,8 @@
         android:layout_alignLeft="@+id/sectionNumber"
         android:layout_below="@+id/sectionNumber"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/editRowNumber"
@@ -90,7 +95,8 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/studentRow"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textColor="@color/black" />
 
     <Button
         android:id="@+id/buttonSave"

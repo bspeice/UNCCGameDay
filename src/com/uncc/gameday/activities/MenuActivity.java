@@ -35,6 +35,9 @@ public class MenuActivity extends Activity {
     		case R.id.action_parking:
     			startActivity(new Intent(this, Parking.class));
     			break;
+    		case R.id.action_home:
+    			startActivity(new Intent(this, Home.class));
+    			break;
     	}
 		return true;
     }

@@ -6,6 +6,7 @@
         android:showAsAction="ifRoom"
         android:title="@string/action_alert_settings"
         android:icon="@drawable/ic_action_settings"/>
+    <item android:id="@+id/action_home" android:title="Home"></item>
     
     
 

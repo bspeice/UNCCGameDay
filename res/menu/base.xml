@@ -5,8 +5,9 @@
         android:orderInCategory="100"
         android:showAsAction="ifRoom"
         android:title="@string/action_alert_settings"
-        android:icon="@drawable/ic_action_settings"/>
-    <item android:id="@+id/action_home" android:title="Home"></item>
+        android:logo="@drawable/ic_action_settings"/>
+    <item android:id="@+id/action_home" android:title="@string/title_acivity_home" android:orderInCategory="350">
+    </item>
     
     
 

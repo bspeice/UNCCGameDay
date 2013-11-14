@@ -34,14 +34,16 @@
         android:layout_height="wrap_content"
         android:text="@string/puple_lot"
         android:textColor="@color/black"
-        android1:textColorLink="@color/pressed_unccgameday" />
+        android1:textColorLink="@color/pressed_unccgameday"
+        android:onClick="onRadioButtonClick" />
    
     <RadioButton
         android1:id="@+id/radioButtonGreen"
         android1:layout_width="wrap_content"
         android1:layout_height="wrap_content"
         android1:text="@string/green_lot"
-        android1:textColor="@color/black"/>
+        android1:textColor="@color/black"
+        android:onClick="onRadioButtonClick" />
 
 
     <RadioButton
@@ -49,73 +51,72 @@
         android1:layout_width="wrap_content"
         android1:layout_height="wrap_content"
         android1:text="@string/silver_lot"
-        android1:textColor="@color/black" />
+        android1:textColor="@color/black"
+        android:onClick="onRadioButtonClick" />
 
     <RadioButton
         android1:id="@+id/radioButtonYellow"
         android1:layout_width="wrap_content"
         android1:layout_height="wrap_content"
         android1:text="@string/yellow_lot"
-        android1:textColor="@color/black" />
+        android1:textColor="@color/black"
+        android:onClick="onRadioButtonClick" />
 
     <RadioButton
         android1:id="@+id/radioButtonBlue"
         android1:layout_width="wrap_content"
         android1:layout_height="wrap_content"
         android1:text="@string/blue_lot"
-        android1:textColor="@color/black" />
+        android1:textColor="@color/black"
+        android:onClick="onRadioButtonClick" />
 
     <RadioButton
         android1:id="@+id/radioButtonBlack"
         android1:layout_width="wrap_content"
         android1:layout_height="wrap_content"
         android1:text="@string/black_lot"
-        android1:textColor="@color/black" />
+        android1:textColor="@color/black"
+        android:onClick="onRadioButtonClick" />
 
     <RadioButton
         android1:id="@+id/radioButtonGold"
         android1:layout_width="wrap_content"
         android1:layout_height="wrap_content"
         android1:text="@string/gold_lot"
-        android1:textColor="@color/black" />
+        android1:textColor="@color/black"
+        android:onClick="onRadioButtonClick" />
 
     <RadioButton
         android1:id="@+id/radioButtonWhite"
         android1:layout_width="wrap_content"
         android1:layout_height="wrap_content"
         android1:text="@string/white_lot"
-        android1:textColor="@color/black" />
+        android1:textColor="@color/black"
+        android:onClick="onRadioButtonClick" />
 
     <RadioButton
         android1:id="@+id/radioButtonPink"
         android1:layout_width="wrap_content"
         android1:layout_height="wrap_content"
         android1:text="@string/pink_lot"
-        android1:textColor="@color/black" />
+        android1:textColor="@color/black"
+        android:onClick="onRadioButtonClick" />
 
     <RadioButton
         android1:id="@+id/radioButtonRed"
         android1:layout_width="wrap_content"
         android1:layout_height="wrap_content"
         android1:text="@string/red_lot"
-        android1:textColor="@color/black" />
+        android1:textColor="@color/black"
+        android:onClick="onRadioButtonClick" />
     
     <RadioButton
          android1:id="@+id/radioButtonOrange"
          android1:layout_width="wrap_content"
          android1:layout_height="wrap_content"
          android1:text="@string/orange_lot"
-         android1:textColor="@color/black" />
+         android1:textColor="@color/black"
+         android:onClick="onRadioButtonClick" />
 </RadioGroup>
-
-<Button
-    android1:id="@+id/button1"
-    android1:layout_width="wrap_content"
-    android1:layout_height="wrap_content"
-    android1:layout_alignParentBottom="true"
-    android1:layout_centerHorizontal="true"
-    android:textColor="@color/black"
-    android1:text="@string/button_get_lot_info"
-    android1:textColorLink="@color/pressed_unccgameday" />
 
 </RelativeLayout>

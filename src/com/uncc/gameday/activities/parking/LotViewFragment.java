@@ -6,6 +6,7 @@ import com.uncc.gameday.R;
 import com.uncc.gameday.parking.ParkingChoice;
 import com.uncc.gameday.parking.ParkingClient;
 import com.uncc.gameday.parking.ParkingCoordinate;
+import com.uncc.gameday.parking.ParkingLot;
 import com.uncc.gameday.parking.ParkingRating;
 import com.uncc.gameday.parking.RatingChoices;
 
@@ -15,6 +16,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
@@ -27,6 +29,11 @@ public class LotViewFragment extends DialogFragment {
 	
 	private void initializeData(ParkingChoice pc){
 		ParkingClient client = new ParkingClient(this.getActivity());
+		
+		ParkingLot pl = client.listLot(pc);
+		ProgressBar bar = (ProgressBar)this.getView().findViewById(R.id.lotViewCurrentFilled);
+		bar.setProgress(pl.getFilledPct());
+		
 		ParkingCoordinate coord = client.listLotLocation(pc).getCoordinate();
 		// Set up the MapView here.
 	}
@@ -44,10 +51,10 @@ public class LotViewFragment extends DialogFragment {
 			pc = ParkingChoice.BLACK;
 		
 		this.pc = pc;
-		initializeData(pc);
-		
-        View view = inflater.inflate(R.layout.lot_view, container);
+
+		View view = inflater.inflate(R.layout.lot_view, container);
         getDialog().setTitle(pc.getValue());
+        initializeData(pc);
 
         if (view == null)
         	Log.e("LotViewFragment", "Unable to instantiate view!");

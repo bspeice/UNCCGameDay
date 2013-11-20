@@ -1,8 +1,6 @@
 package com.uncc.gameday.parking;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import retrofit.RestAdapter;
 import android.content.Context;

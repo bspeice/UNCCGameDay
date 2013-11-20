@@ -1,15 +1,5 @@
 package com.uncc.gameday.activities.parking;
 
-import javax.xml.datatype.Duration;
-
-import com.uncc.gameday.R;
-import com.uncc.gameday.parking.ParkingChoice;
-import com.uncc.gameday.parking.ParkingClient;
-import com.uncc.gameday.parking.ParkingCoordinate;
-import com.uncc.gameday.parking.ParkingLot;
-import com.uncc.gameday.parking.ParkingRating;
-import com.uncc.gameday.parking.RatingChoices;
-
 import android.app.DialogFragment;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,6 +9,13 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.Toast;
+
+import com.uncc.gameday.R;
+import com.uncc.gameday.parking.ParkingChoice;
+import com.uncc.gameday.parking.ParkingClient;
+import com.uncc.gameday.parking.ParkingCoordinate;
+import com.uncc.gameday.parking.ParkingLot;
+import com.uncc.gameday.parking.RatingChoices;
 
 public class LotViewFragment extends DialogFragment {
 	

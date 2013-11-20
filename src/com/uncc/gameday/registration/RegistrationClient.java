@@ -6,11 +6,6 @@ import retrofit.RestAdapter;
 import android.content.Context;
 
 import com.uncc.gameday.R;
-import com.uncc.gameday.parking.ParkingChoice;
-import com.uncc.gameday.parking.ParkingLot;
-import com.uncc.gameday.parking.ParkingLotCallback;
-import com.uncc.gameday.parking.ParkingRating;
-import com.uncc.gameday.parking.RatingChoices;
 import com.uncc.gameday.rest.GamedayService;
 
 public class RegistrationClient {

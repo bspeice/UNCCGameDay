@@ -2,7 +2,6 @@ package com.uncc.gameday.activities;
 
 import android.app.FragmentManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import com.uncc.gameday.R;

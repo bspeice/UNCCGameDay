@@ -8,10 +8,20 @@ import android.content.Context;
 import com.uncc.gameday.R;
 import com.uncc.gameday.rest.GamedayService;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class ParkingClient.
+ */
 public class ParkingClient {
 
+	/** The gds. */
 	private GamedayService gds;
 	
+	/**
+	 * Instantiates a new parking client.
+	 *
+	 * @param c the c
+	 */
 	public ParkingClient(Context c) {
 		RestAdapter ra = new RestAdapter.Builder()
 			.setServer("http://" + c.getString(R.string.server_hostname))
@@ -19,18 +29,41 @@ public class ParkingClient {
 		gds = ra.create(GamedayService.class);
 	}
 	
+	/**
+	 * List lots.
+	 *
+	 * @return the list
+	 */
 	public List<ParkingLot> listLots() {
 		return gds.listLots();
 	}
 	
+	/**
+	 * List lot.
+	 *
+	 * @param choice the choice
+	 * @return the parking lot
+	 */
 	public ParkingLot listLot(ParkingChoice choice) {
 		return gds.listLot(choice.getValue());
 	}
 	
+	/**
+	 * List lot.
+	 *
+	 * @param lot the lot
+	 * @return the parking lot
+	 */
 	public ParkingLot listLot(ParkingLot lot) {
 		return gds.listLot(lot.getLocation().getValue());
 	}
 	
+	/**
+	 * Rate lot.
+	 *
+	 * @param rating the rating
+	 * @param parkingLot the parking lot
+	 */
 	public void rateLot(RatingChoices rating, ParkingChoice parkingLot) {
 		ParkingRating pRating = new ParkingRating();
 		pRating.setParkingLot(parkingLot);
@@ -38,16 +71,33 @@ public class ParkingClient {
 		gds.rateLot(pRating, new ParkingLotCallback());
 	}
 	
+	/**
+	 * Rate lot.
+	 *
+	 * @param rating the rating
+	 */
 	public void rateLot(ParkingRating rating) {
 		gds.rateLot(rating, new ParkingLotCallback());
 	}
 	
+	/**
+	 * List lot location.
+	 *
+	 * @param p the p
+	 * @return the parking lot
+	 */
 	public ParkingLot listLotLocation(ParkingLot p){
 		ParkingCoordinate pc = gds.listLotLocation(p.getLocation().getValue());
 		p.setCoordinate(pc);
 		return p;
 	}
 	
+	/**
+	 * List lot location.
+	 *
+	 * @param c the c
+	 * @return the parking lot
+	 */
 	public ParkingLot listLotLocation(ParkingChoice c) {
 		ParkingCoordinate pc = gds.listLotLocation(c.getValue());
 		ParkingLot pl = new ParkingLot();

@@ -17,13 +17,26 @@ import com.uncc.gameday.parking.ParkingCoordinate;
 import com.uncc.gameday.parking.ParkingLot;
 import com.uncc.gameday.parking.RatingChoices;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class LotViewFragment.
+ */
 public class LotViewFragment extends DialogFragment {
 	
+	/** The pc. */
 	ParkingChoice pc;
 	
+	/**
+	 * Instantiates a new lot view fragment.
+	 */
 	public LotViewFragment(){
 	}
 	
+	/**
+	 * Initialize data.
+	 *
+	 * @param pc the pc
+	 */
 	private void initializeData(ParkingChoice pc){
 		ParkingClient client = new ParkingClient(this.getActivity());
 		
@@ -35,6 +48,9 @@ public class LotViewFragment extends DialogFragment {
 		// Set up the MapView here.
 	}
 	
+	/* (non-Javadoc)
+	 * @see android.app.Fragment#onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+	 */
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
@@ -58,6 +74,9 @@ public class LotViewFragment extends DialogFragment {
         return view;
     }
 	
+	/**
+	 * On submit rating.
+	 */
 	public void onSubmitRating() {
 		// Submit a rating to the server
 		SeekBar bar = (SeekBar)this.getView().findViewById(R.id.lotViewRateLot);

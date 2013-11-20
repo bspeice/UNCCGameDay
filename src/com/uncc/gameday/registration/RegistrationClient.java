@@ -8,10 +8,20 @@ import android.content.Context;
 import com.uncc.gameday.R;
 import com.uncc.gameday.rest.GamedayService;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class RegistrationClient.
+ */
 public class RegistrationClient {
 	
+	/** The gds. */
 	private GamedayService gds;
 	
+	/**
+	 * Instantiates a new registration client.
+	 *
+	 * @param c the c
+	 */
 	public RegistrationClient(Context c) {
 		RestAdapter ra = new RestAdapter.Builder()
 			.setServer("http://" + c.getString(R.string.server_hostname))
@@ -19,18 +29,40 @@ public class RegistrationClient {
 		gds = ra.create(GamedayService.class);
 	}
 	
+	/**
+	 * Register attendee.
+	 *
+	 * @param a the a
+	 */
 	public void registerAttendee(Attendee a) {
 		gds.registerUser(a, new AttendeeCallback());
 	}
 	
+	/**
+	 * List attendee.
+	 *
+	 * @param id the id
+	 * @return the attendee
+	 */
 	public Attendee listAttendee(int id) {
 		return gds.getUser(id);
 	}
 	
+	/**
+	 * List attendee.
+	 *
+	 * @param a the a
+	 * @return the attendee
+	 */
 	public Attendee listAttendee(Attendee a) {
 		return gds.getUser(a.getFirstName(), a.getLastName());
 	}
 	
+	/**
+	 * List attendees.
+	 *
+	 * @return the list
+	 */
 	public List<Attendee> listAttendees() {
 		return gds.getAllUsers();
 	}

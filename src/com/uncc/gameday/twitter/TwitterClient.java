@@ -11,14 +11,29 @@ import twitter4j.TwitterFactory;
 import twitter4j.conf.Configuration;
 import twitter4j.conf.ConfigurationBuilder;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TwitterClient.
+ */
 public class TwitterClient {
 	
+	/** The Constant CONSUMER_KEY. */
 	static final String CONSUMER_KEY = "vfRa3Tr5QYaU8Jr2pKHtiA";
+	
+	/** The Constant CONSUMER_SECRET. */
 	static final String CONSUMER_SECRET = "gGRdIrhPdX2Vrg296xOvTqE4sgOISMphRmPdrGirbU";
 	
+	/** The c. */
 	Configuration c;
+	
+	/** The t. */
 	Twitter t;
 	
+	/**
+	 * Instantiates a new twitter client.
+	 *
+	 * @throws TwitterException the twitter exception
+	 */
 	public TwitterClient() throws TwitterException {
 		ConfigurationBuilder cb = new ConfigurationBuilder();
 		cb.setApplicationOnlyAuthEnabled(true).setUseSSL(true);
@@ -28,6 +43,12 @@ public class TwitterClient {
 		t.getOAuth2Token();
 	}
 	
+	/**
+	 * Fetch tweets.
+	 *
+	 * @param handle the handle
+	 * @return the list
+	 */
 	public List<Status> fetchTweets(String handle) {
 		try {
 			return t.getUserTimeline(handle);
@@ -38,6 +59,13 @@ public class TwitterClient {
 		}
 	}
 	
+	/**
+	 * Fetch tweets.
+	 *
+	 * @param handle the handle
+	 * @param count the count
+	 * @return the list
+	 */
 	public List<Status> fetchTweets(String handle, int count) {
 		try {
 			return t.getUserTimeline(handle, new Paging(1, count));

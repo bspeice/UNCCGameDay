@@ -9,14 +9,26 @@ import com.uncc.gameday.activities.parking.LotViewFragment;
 import com.uncc.gameday.parking.ParkingChoice;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Parking.
+ */
 public class Parking extends MenuActivity {
 
+	/* (non-Javadoc)
+	 * @see com.uncc.gameday.activities.MenuActivity#onCreate(android.os.Bundle)
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_parking);
 	}
 	
+	/**
+	 * On radio button click.
+	 *
+	 * @param v the v
+	 */
 	public void onRadioButtonClick(View v) {
 		FragmentManager fm = this.getFragmentManager();
 		LotViewFragment f = new LotViewFragment();

@@ -8,14 +8,24 @@ import android.view.MenuItem;
 
 import com.uncc.gameday.R;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class MenuActivity.
+ */
 public class MenuActivity extends Activity {
 
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onCreate(android.os.Bundle)
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
 	}
 
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
+	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -23,6 +33,9 @@ public class MenuActivity extends Activity {
 		return true;
 	}
 	
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
+	 */
 	@Override
     public boolean onOptionsItemSelected(MenuItem item) {
     	switch (item.getItemId()){

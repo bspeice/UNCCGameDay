@@ -83,6 +83,16 @@ public class AlertDB extends SQLiteOpenHelper {
 		return null;
 	}
 	
+	//delete specified alert from DB
+	public void deleteAlert(Alert alert) {
+		SQLiteDatabase db = this.getWritableDatabase();
+		db.delete(TABLE_ALERTS, KEY_MESSAGE + " = ?", 
+				new String[] { String.valueOf(alert.getMessage()) });
+		db.close();
+		
+		}
+
+	
 	
 	//get all alerts from Database
 	//regardless of type, or if it has been shown

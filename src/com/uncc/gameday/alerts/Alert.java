@@ -55,6 +55,10 @@ public class Alert {
 		this.shown = i;
 	}
 	
+	public String toString() {
+		return this.message;
+	}
+	
 	public void displayNotification(Context ctx) {
 		NotificationCompat.Builder builder = new NotificationCompat.Builder(ctx)
 			.setSmallIcon(R.drawable.ic_launcher)

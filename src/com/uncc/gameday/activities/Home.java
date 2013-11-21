@@ -9,6 +9,8 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -25,9 +27,6 @@ import com.uncc.gameday.alerts.AlertService;
  * The Class Home.
  */
 public class Home extends MenuActivity {
-		
-
-	
 	/** The alarm rate. */
 	private final long alarmRate = 300000; // 5 Minutes
 	
@@ -47,7 +46,6 @@ public class Home extends MenuActivity {
             }
         });
 		
-		
 		// Start up the AlarmManager to fetch alerts in the background
 		AlarmManager am = (AlarmManager) this.getSystemService(ALARM_SERVICE);
 		Intent alertFetcher = new Intent(this, AlertService.class);
@@ -63,43 +61,53 @@ public class Home extends MenuActivity {
 		this.displayList();
 	}
 	
-	
+	//displays all alerts in database, regardless of being shown or not
 	public void displayList()
 	{
 		
-		List<Alert> alerts = new AlertDB(this).fetchAll();
+		final List<Alert> alerts = new AlertDB(this).fetchAll();
 		
-		String[] printArray = new String[alerts.size()];
-	
-		//get message from each alert and put in printArray
-    	for(int i = 0; i < alerts.size(); i++)
-    	{
-    		printArray[i] = alerts.get(i).getMessage();
-    	}
-    	
-	    ListView listView = (ListView)findViewById(R.id.alertsListView);
-	    ArrayAdapter<String> adapter =
-	            new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, printArray);
+	    final ListView listView = (ListView)findViewById(R.id.alertsListView);
+	    final ArrayAdapter<Alert> adapter =
+	            new ArrayAdapter<Alert>(this,android.R.layout.simple_list_item_1, alerts);
 	    listView.setAdapter(adapter);
+	    
+	    //tap to delete alert from list and database
+	    listView.setOnItemClickListener(new OnItemClickListener()  {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position,
+					long id) {
+				deleteAlert(alerts.get(position));
+				displayList();
+			}	
+	    });
 	}
 	
+	//function to delete alert from database
+	public void deleteAlert(Alert alert)
+	{
+		new AlertDB(this).deleteAlert(alert);
+	}
+	
+	//displays only unread alerts
 	public void displayUnread()
 	{
+		final List<Alert> alerts = new AlertDB(this).fetchUnread();
 		
-		List<Alert> alerts = new AlertDB(this).fetchUnread();
-		
-		String[] printArray = new String[alerts.size()];
-	
-		//get message from each alert and put in printArray
-    	for(int i = 0; i < alerts.size(); i++)
-    	{
-    		printArray[i] = alerts.get(i).getMessage();
-    	}
-    	
-	    ListView listView = (ListView)findViewById(R.id.alertsListView);
-	    ArrayAdapter<String> adapter =
-	            new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, printArray);
+	    final ListView listView = (ListView)findViewById(R.id.alertsListView);
+	    final ArrayAdapter<Alert> adapter =
+	            new ArrayAdapter<Alert>(this,android.R.layout.simple_list_item_1, alerts);
 	    listView.setAdapter(adapter);
+	    
+	    //tap to delete alert from list and database
+	    listView.setOnItemClickListener(new OnItemClickListener()  {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position,
+					long id) {
+				deleteAlert(alerts.get(position));
+				displayList();
+			}	
+	    });
 	}
 	
 	/**

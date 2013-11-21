@@ -8,7 +8,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 
@@ -36,6 +38,14 @@ public class Home extends MenuActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
 		
+		//ClearAllAlerts button
+		//sets list to display only unread alerts
+        final Button button = (Button) findViewById(R.id.clearAlertsButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+            	displayUnread();	
+            }
+        });
 		
 		
 		// Start up the AlarmManager to fetch alerts in the background
@@ -58,6 +68,25 @@ public class Home extends MenuActivity {
 	{
 		
 		List<Alert> alerts = new AlertDB(this).fetchAll();
+		
+		String[] printArray = new String[alerts.size()];
+	
+		//get message from each alert and put in printArray
+    	for(int i = 0; i < alerts.size(); i++)
+    	{
+    		printArray[i] = alerts.get(i).getMessage();
+    	}
+    	
+	    ListView listView = (ListView)findViewById(R.id.alertsListView);
+	    ArrayAdapter<String> adapter =
+	            new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, printArray);
+	    listView.setAdapter(adapter);
+	}
+	
+	public void displayUnread()
+	{
+		
+		List<Alert> alerts = new AlertDB(this).fetchUnread();
 		
 		String[] printArray = new String[alerts.size()];
 	

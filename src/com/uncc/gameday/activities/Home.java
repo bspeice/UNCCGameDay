@@ -1,15 +1,21 @@
 package com.uncc.gameday.activities;
 
+import java.util.List;
+
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 
 
 import com.uncc.gameday.R;
+import com.uncc.gameday.alerts.Alert;
+import com.uncc.gameday.alerts.AlertDB;
 import com.uncc.gameday.alerts.AlertService;
 
 // TODO: Auto-generated Javadoc
@@ -43,6 +49,28 @@ public class Home extends MenuActivity {
 		
 		// Double check if we need to do any first-run code
 		this.onFirstRun();
+		
+		this.displayList();
+	}
+	
+	
+	public void displayList()
+	{
+		
+		List<Alert> alerts = new AlertDB(this).fetchAll();
+		
+		String[] printArray = new String[alerts.size()];
+	
+		//get message from each alert and put in printArray
+    	for(int i = 0; i < alerts.size(); i++)
+    	{
+    		printArray[i] = alerts.get(i).getMessage();
+    	}
+    	
+	    ListView listView = (ListView)findViewById(R.id.alertsListView);
+	    ArrayAdapter<String> adapter =
+	            new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, printArray);
+	    listView.setAdapter(adapter);
 	}
 	
 	/**

@@ -18,7 +18,7 @@ public class AlertService extends IntentService {
 	@Override
 	protected void onHandleIntent(Intent intent) {
 		// Go fetch all the alerts!
-		//new AlertFetcher().fetchAlerts(this);
+		new AlertFetcher().fetchAlerts(this);
 	
 		//if first application run, create and store
 		//timed alerts into database

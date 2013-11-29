@@ -22,9 +22,9 @@ public class Alerts extends MenuActivity {
 	}
 	
 	/**
-	 * On click timed alerts.
+	 * On clicking the Timed Alerts box, enable or disable the alerts.
 	 *
-	 * @param view the view
+	 * @param view - The view clicked
 	 */
 	public void onClickTimedAlerts(View view) {
 		int toastDuration = Toast.LENGTH_SHORT;
@@ -37,7 +37,7 @@ public class Alerts extends MenuActivity {
 	}
 	
 	/**
-	 * On click organization alerts.
+	 * On clicking the Organization Alerts box, enable or disable the alerts.
 	 *
 	 * @param view the view
 	 */
@@ -52,7 +52,7 @@ public class Alerts extends MenuActivity {
 	}
 	
 	/**
-	 * On click university alerts.
+	 * On clicking the University Alerts box, enable or disable the alerts.
 	 *
 	 * @param view the view
 	 */

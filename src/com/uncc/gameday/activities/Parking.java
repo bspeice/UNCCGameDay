@@ -25,15 +25,17 @@ public class Parking extends MenuActivity {
 	}
 	
 	/**
-	 * On radio button click.
+	 * On clicking a parking lot button, show that fragment
 	 *
 	 * @param v the v
 	 */
 	public void onRadioButtonClick(View v) {
+		// Set up some initial fragment boilerplate
 		FragmentManager fm = this.getFragmentManager();
 		LotViewFragment f = new LotViewFragment();
 		Bundle fBundle = new Bundle();
 		
+		// Get the actual parking lot we will load (store as a String)
 		switch (v.getId()) {
 			case R.id.radioButtonBlack:
 				fBundle.putCharArray("CHOICE", ParkingChoice.BLACK.getValue().toCharArray());
@@ -70,6 +72,8 @@ public class Parking extends MenuActivity {
 				break;
 		}
 		
+		// Start up the fragment with the information
+		// Note the setArguments() and getArguments() function
 		f.setArguments(fBundle);
 		f.show(fm, "lot_view");
 	}

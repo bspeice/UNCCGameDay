@@ -10,7 +10,7 @@ import com.uncc.gameday.R;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class MenuActivity.
+ * The Class MenuActivity - Provides a re-usable way to define menu behavior
  */
 public class MenuActivity extends Activity {
 
@@ -33,8 +33,11 @@ public class MenuActivity extends Activity {
 		return true;
 	}
 	
-	/* (non-Javadoc)
-	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
+	/**
+	 * When a menu item is selected, fire up its activity. This allows us to
+	 * define a single method for menu items that is re-used by sub-classes.
+	 * 
+	 * @param item - The MenuItem selected
 	 */
 	@Override
     public boolean onOptionsItemSelected(MenuItem item) {

@@ -21,7 +21,8 @@ public class GameDay extends Application{
     }
 
     /**
-     * Gets the app context.
+     * Provides a static way of getting to the Application-level context.
+     * Unless you know *exactly* why you need this, you don't.
      *
      * @return the app context
      */

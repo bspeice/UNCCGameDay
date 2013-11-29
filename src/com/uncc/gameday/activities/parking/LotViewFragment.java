@@ -23,7 +23,7 @@ import com.uncc.gameday.parking.RatingChoices;
  */
 public class LotViewFragment extends DialogFragment {
 	
-	/** The pc. */
+	/** The ParkingChoice that we are viewing */
 	ParkingChoice pc;
 	
 	/**
@@ -33,9 +33,11 @@ public class LotViewFragment extends DialogFragment {
 	}
 	
 	/**
-	 * Initialize data.
+	 * Initialize the data when the fragment is started.
+	 * Specifically, set up the MapView to display, and fetch
+	 * other information about the parking lot.
 	 *
-	 * @param pc the pc
+	 * @param pc - The Parking lot we need to get information for
 	 */
 	private void initializeData(ParkingChoice pc){
 		ParkingClient client = new ParkingClient(this.getActivity());
@@ -75,7 +77,7 @@ public class LotViewFragment extends DialogFragment {
     }
 	
 	/**
-	 * On submit rating.
+	 * Send a parking lot rating to the server
 	 */
 	public void onSubmitRating() {
 		// Submit a rating to the server

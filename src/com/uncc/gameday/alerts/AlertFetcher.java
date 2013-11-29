@@ -10,20 +10,16 @@ import twitter4j.Twitter;
 import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
 import twitter4j.conf.ConfigurationBuilder;
-import android.app.Activity;
-import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
 
 import com.uncc.gameday.R;
+import com.uncc.gameday.twitter.TwitterClient;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class AlertFetcher.
  */
-
-
 public class AlertFetcher {
         // Class responsible for fetching all alerts as necessary.
         
@@ -31,7 +27,7 @@ public class AlertFetcher {
         private int maxTweets = 5;
         
         /**
-         * Fetch alerts.
+         * Fetch all alerts - Twitter, timed, etc.
          *
          * @param ctx the ctx
          */
@@ -57,74 +53,52 @@ public class AlertFetcher {
         }
     
         /**
-         * Fetch organization alerts.
+         * Fetch all Organization alerts from Twitter
          * 
-         * @param ctx the ctx
-         * @throws TwitterException the twitter exception
+         * @param ctx - The Context needed to access the Internet
+         * @throws TwitterException - Error in using the Twitter API
          */
-        private void fetchOrganizationAlerts(Context ctx) throws TwitterException {
-        	
-    	    //creates configuration for twitter access
-    	    ConfigurationBuilder cb = new ConfigurationBuilder();
-    	    
-            cb.setDebugEnabled(true)
-            	.setOAuthConsumerKey("vfRa3Tr5QYaU8Jr2pKHtiA")
-            	.setOAuthConsumerSecret("gGRdIrhPdX2Vrg296xOvTqE4sgOISMphRmPdrGirbU")
-            	.setOAuthAccessToken("1912299896-uqrhDiif3oX9Ybkf8rM5pQDWN6mW4Y7vRLK47C7")
-            	.setOAuthAccessTokenSecret("kZ11I74dcA00pWgQDZelFQz1ADJJMK0ejr6snnU34jUVT");
+        private void fetchOrganizationAlerts(Context ctx) throws TwitterException {            
+            // Process fetching organization alerts (alerts retweeted by us)
+            // Guaranteed to return <= maxTweets
+            String handle = ctx.getString(R.string.gameday_handle);
+            TwitterClient tc = new TwitterClient();
+            List<Status> statuses = tc.fetchTweets(handle, maxTweets);
             
-            TwitterFactory tf = new TwitterFactory(cb.build());
+            // Filter for anything created by us (retweet)
+            for (Iterator<Status> it = statuses.iterator(); it.hasNext();){
+                // May need to switch to isRetweetByMe, not sure if
+        		// We're using the right function (documentation is awful)
+                if (!it.next().isRetweet())
+                        it.remove();
+            }
             
-                // Process fetching organization alerts (alerts retweeted by us)
-                // Will not necessarily fetch `maxTweets` tweets.
-                String handle = ctx.getString(R.string.gameday_handle);
-                Twitter twitter = tf.getInstance();
-                List<Status> statuses = twitter.getUserTimeline(handle, new Paging(1, maxTweets));
-                
-                // Filter for anything created by us (retweet)
-                for (Iterator<Status> it = statuses.iterator(); it.hasNext();){
-                        // May need to switch to isRetweetByMe (documentation is awful)
-                        if (!it.next().isRetweet())
-                                it.remove();
-                }
-                
-                String type = AlertType.getValue(AlertType.ORGANIZATION);
-                pushToDatabase(statuses, type, ctx);
+            String type = AlertType.getValue(AlertType.ORGANIZATION);
+            pushToDatabase(statuses, type, ctx);
                 
                 
                 // List contains all valid alerts now
         }
         
         /**
-         * Fetch university alerts.
+         * Fetch alerts from the University Twitter
          *
-         * @param ctx the ctx
-         * @throws TwitterException the twitter exception
+         * @param ctx - The Context for accessing the Internet
+         * @throws TwitterException - Throws an exception for misuse of Twitter API
          */
         private void fetchUniversityAlerts(Context ctx) throws TwitterException {
-                // Process fetching university alerts
-                // Guaranteed to get `maxTweets` tweets
-        	
-    	    //creates configuration for twitter access
-    	    ConfigurationBuilder cb = new ConfigurationBuilder();
-    	    
-            cb.setDebugEnabled(true)
-            	.setOAuthConsumerKey("vfRa3Tr5QYaU8Jr2pKHtiA")
-            	.setOAuthConsumerSecret("gGRdIrhPdX2Vrg296xOvTqE4sgOISMphRmPdrGirbU")
-            	.setOAuthAccessToken("1912299896-uqrhDiif3oX9Ybkf8rM5pQDWN6mW4Y7vRLK47C7")
-            	.setOAuthAccessTokenSecret("kZ11I74dcA00pWgQDZelFQz1ADJJMK0ejr6snnU34jUVT");
+            // Process fetching university alerts
+            // Guaranteed to get `maxTweets` tweets
             
-            TwitterFactory tf = new TwitterFactory(cb.build());
+            String handle = ctx.getString(R.string.university_handle);
+            TwitterClient tc = new TwitterClient();
+            List<Status> statuses = tc.fetchTweets(handle, maxTweets);
             
-                String handle = ctx.getString(R.string.university_handle);
-                Twitter twitter = tf.getInstance();
-                List<Status> statuses = twitter.getUserTimeline(handle, new Paging(1, maxTweets));
-                
-                String type = AlertType.getValue(AlertType.UNIVERSITY);
-                pushToDatabase(statuses, type, ctx);
-                
-                System.out.println(statuses.get(0).getText());
-                // List contains all valid alerts now
+            String type = AlertType.getValue(AlertType.UNIVERSITY);
+            pushToDatabase(statuses, type, ctx);
+            
+            System.out.println(statuses.get(0).getText());
+            // List contains all valid alerts now
         }
         
         /**
@@ -136,21 +110,10 @@ public class AlertFetcher {
         private void fetchGamedayAlerts(Context ctx) throws TwitterException {
                 // Process fetching alerts generated by staff of UNCCGameDay
                 // Not guaranteed to get `maxTweets` tweets
-        	
-        	    //creates configuration for twitter access
-        	    ConfigurationBuilder cb = new ConfigurationBuilder();
-        	    
-                cb.setDebugEnabled(true)
-                	.setOAuthConsumerKey("vfRa3Tr5QYaU8Jr2pKHtiA")
-                	.setOAuthConsumerSecret("gGRdIrhPdX2Vrg296xOvTqE4sgOISMphRmPdrGirbU")
-                	.setOAuthAccessToken("1912299896-uqrhDiif3oX9Ybkf8rM5pQDWN6mW4Y7vRLK47C7")
-                	.setOAuthAccessTokenSecret("kZ11I74dcA00pWgQDZelFQz1ADJJMK0ejr6snnU34jUVT");
-                
-                TwitterFactory tf = new TwitterFactory(cb.build());
             
                 String handle = ctx.getString(R.string.gameday_handle);
-                Twitter twitter = tf.getInstance();
-                List<Status> statuses = twitter.getUserTimeline(handle, new Paging(1, maxTweets));
+                TwitterClient tc = new TwitterClient();
+                List<Status> statuses = tc.fetchTweets(handle, maxTweets);
                 
                 // Filter out anything not from us
                 for (Iterator<Status> it = statuses.iterator(); it.hasNext();){

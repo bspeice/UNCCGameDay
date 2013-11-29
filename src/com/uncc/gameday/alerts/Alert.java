@@ -59,6 +59,11 @@ public class Alert {
 		return this.message;
 	}
 	
+	/**
+	 * Helper method to make displaying an alert on the statusbar easy
+	 *
+	 * @param ctx - The context needed to display the alert.
+	 */
 	public void displayNotification(Context ctx) {
 		NotificationCompat.Builder builder = new NotificationCompat.Builder(ctx)
 			.setSmallIcon(R.drawable.ic_launcher)

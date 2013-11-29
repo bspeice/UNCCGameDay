@@ -11,7 +11,6 @@ import twitter4j.TwitterFactory;
 import twitter4j.conf.Configuration;
 import twitter4j.conf.ConfigurationBuilder;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class TwitterClient.
  */
@@ -63,7 +62,7 @@ public class TwitterClient {
 	 * Fetch tweets.
 	 *
 	 * @param handle the handle
-	 * @param count the count
+	 * @param count The maximum number of tweets to fetch
 	 * @return the list
 	 */
 	public List<Status> fetchTweets(String handle, int count) {

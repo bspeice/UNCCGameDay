@@ -12,22 +12,45 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 /* Responsible for handling persistence/fetching of alerts */
 
+/**
+ * The Class AlertDB.
+ */
 public class AlertDB extends SQLiteOpenHelper {
 	
+	/** The Constant DATABASE_VERSION. */
 	private static final int DATABASE_VERSION = 1;
+	
+	/** The Constant DATABASE_NAME. */
 	private static final String DATABASE_NAME = "AlertDataBase";
+	
+	/** The Constant TABLE_ALERTS. */
 	private static final String TABLE_ALERTS = "alerts";
 
+	/** The Constant KEY_ALARM_DATE. */
 	private static final String KEY_ALARM_DATE = "alarm_date";
+	
+	/** The Constant KEY_MESSAGE. */
 	private static final String KEY_MESSAGE = "message";
+	
+	/** The Constant KEY_SHOWN. */
 	private static final String KEY_SHOWN = "shown";
+	
+	/** The Constant KEY_TYPE. */
 	private static final String KEY_TYPE = "type";
 	
 
+	/**
+	 * Instantiates our wrapper around the SQLiteOpenHelper
+	 *
+	 * @param context - The context to open the database in
+	 */
 	public AlertDB(Context context){
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
-		
 	}
+	
+	/**
+	 * Create the initial Database
+	 */
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		String CREATE_ALERTS_TABLE = "CREATE TABLE " + TABLE_ALERTS + "("
@@ -35,6 +58,10 @@ public class AlertDB extends SQLiteOpenHelper {
 				+ KEY_SHOWN + " INT," + KEY_TYPE + " STRING" + ")";
 		db.execSQL(CREATE_ALERTS_TABLE);
 	}
+	
+	/**
+	 * Upgrade the database on application update
+	 */
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		//drop older table if it exists
@@ -45,7 +72,11 @@ public class AlertDB extends SQLiteOpenHelper {
 		
 	}
 
-	//persist alert into Database
+	/**
+	 * Persist an alert into the database
+	 *
+	 * @param a - The Alert to persist
+	 */
 	public void persist(Alert a) {
 		
 		SQLiteDatabase db = this.getWritableDatabase();
@@ -62,8 +93,12 @@ public class AlertDB extends SQLiteOpenHelper {
 		db.close();
 	}
 	
-	//persist list of alerts by looping through list
-	//and calling persist
+	/**
+	 * Persist a list of alerts into the database -
+	 * helper method for easy iteration
+	 *
+	 * @param alerts - The alerts to store
+	 */
 	public void persistMultiple(List<Alert> alerts) {
     	
 		for(int i = 0; i < alerts.size(); i++)
@@ -73,17 +108,35 @@ public class AlertDB extends SQLiteOpenHelper {
 		
 	}
 	
+	/**
+	 * Fetch an alert by date
+	 * TODO: Unused. Remove?
+	 *
+	 * @param d - The date to fetch an alert from
+	 * @return the Alert
+	 */
 	public Alert fetch(Date d) {
 		
 		return null;
 	}
 	
+	/**
+	 * Fetch multiple alerts from the Database
+	 * TODO: Unused. Remove?
+	 *
+	 * @param dates the dates to fetch alerts from
+	 * @return the list
+	 */
 	public List<Alert> fetchMultiple(List<Date> dates) {
 		
 		return null;
 	}
 	
-	//delete specified alert from DB
+	/**
+	 * Delete an alert from the Database whenever the Alert message matches
+	 *
+	 * @param alert the alert
+	 */
 	public void deleteAlert(Alert alert) {
 		SQLiteDatabase db = this.getWritableDatabase();
 		db.delete(TABLE_ALERTS, KEY_MESSAGE + " = ?", 
@@ -94,9 +147,11 @@ public class AlertDB extends SQLiteOpenHelper {
 
 	
 	
-	//get all alerts from Database
-	//regardless of type, or if it has been shown
-	//update each alert in DB as being shown
+	/**
+	 * Fetch all alerts from the Database, and mark as read
+	 *
+	 * @return the list
+	 */
 	public List<Alert> fetchAll() {
 		
 		List<Alert> alertList = new ArrayList<Alert>();
@@ -127,7 +182,11 @@ public class AlertDB extends SQLiteOpenHelper {
 		return alertList;
 	}
 	
-	//fetch just unread alerts from database
+	/**
+	 * Fetch unread alerts from the database, and mark them as read
+	 *
+	 * @return the list
+	 */
 	public List<Alert> fetchUnread() {
 		
 		List<Alert> alertList = new ArrayList<Alert>();
@@ -161,7 +220,12 @@ public class AlertDB extends SQLiteOpenHelper {
 		return alertList;
 	}
 
-	//update alert in DB to be classified as shown
+	/**
+	 * Update an alert to be marked as shown
+	 *
+	 * @param alert the alert
+	 * @return the int
+	 */
 	private int updateAlert(Alert alert) {
 		
 		SQLiteDatabase db = this.getWritableDatabase();

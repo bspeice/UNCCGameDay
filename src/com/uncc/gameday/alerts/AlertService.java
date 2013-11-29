@@ -6,15 +6,30 @@ import android.app.IntentService;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class AlertService.
+ */
 public class AlertService extends IntentService {
+	
+	/** The Constant name. */
 	private static final String name = "AlertService";
 	
+	/** The prefs. */
 	SharedPreferences prefs = null;
 
+	/**
+	 * Instantiates a new alert service.
+	 */
 	public AlertService() {
 		super(name);
 	}
 
+	/**
+	 * Start the actual alert service
+	 * 
+	 * @param intent - The incoming intent that started us
+	 */
 	@Override
 	protected void onHandleIntent(Intent intent) {
 		// Go fetch all the alerts!
@@ -38,8 +53,10 @@ public class AlertService extends IntentService {
 
 	}
 	
-	//Creates timed alerts and adds them to AlertDB
-	//Only runs on first application startup
+	/**
+	 * Creates timed alerts and adds them to AlertDB
+	 * Only runs on first application startup
+	 */
 	protected void onFirstRun()
 	{
 		@SuppressWarnings("deprecation")
@@ -55,7 +72,4 @@ public class AlertService extends IntentService {
 		db.persist(b);
 		db.persist(c);
 	}
-	
-	
-
 }

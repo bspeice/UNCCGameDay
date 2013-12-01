@@ -11,6 +11,9 @@ import com.uncc.gameday.rest.GamedayService;
 // TODO: Auto-generated Javadoc
 /**
  * The Class RegistrationClient.
+ * Client used for wrapping around the service provided by Retrofit. This way,
+ * all the lower-level details are handled, and we can overload some behavior
+ * to enable working with different classes.
  */
 public class RegistrationClient {
 	

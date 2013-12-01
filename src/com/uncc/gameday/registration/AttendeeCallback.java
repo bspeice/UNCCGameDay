@@ -8,6 +8,8 @@ import retrofit.client.Response;
 // TODO: Auto-generated Javadoc
 /**
  * The Class AttendeeCallback.
+ * Used to implement a POST callback for Retrofit. Same deal as the ParkingCallback,
+ * not sure it's needed, but makes our lives easy if we need to change it later.
  */
 public class AttendeeCallback implements Callback<Attendee> {
 

@@ -3,6 +3,8 @@ package com.uncc.gameday.registration;
 // TODO: Auto-generated Javadoc
 /**
  * The Class Attendee.
+ * Basic POJO for communicating information about people registered to attend
+ * a game, and for sending that information to the server.
  */
 public class Attendee {
 	
@@ -110,7 +112,4 @@ public class Attendee {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
-	
-
 }

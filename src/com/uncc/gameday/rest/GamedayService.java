@@ -16,6 +16,7 @@ import com.uncc.gameday.registration.Attendee;
 // TODO: Auto-generated Javadoc
 /**
  * The Interface GamedayService.
+ * Used by Retrofit to make a super-simple REST adapter for Java.
  */
 public interface GamedayService {
 	

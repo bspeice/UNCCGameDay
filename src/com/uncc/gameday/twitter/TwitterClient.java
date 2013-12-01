@@ -13,6 +13,9 @@ import twitter4j.conf.ConfigurationBuilder;
 
 /**
  * The Class TwitterClient.
+ * Client used to interface with the Twitter API.
+ * Note that while it should be secure to store a Consumer Secret in this
+ * class, there is likely a better solution.
  */
 public class TwitterClient {
 	

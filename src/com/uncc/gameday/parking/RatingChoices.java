@@ -6,16 +6,16 @@ package com.uncc.gameday.parking;
  */
 public enum RatingChoices {
 	
-	/** The emp. */
+	/** An Empty rating (0% full) */
 	EMP ("EMPTY"),
 	
-	/** The sct. */
+	/** A Scattered rating (33% full) */
 	SCT ("SCATTERED"),
 	
-	/** The bsy. */
+	/** A Busy rating (66% full) */
 	BSY ("BUSY"),
 	
-	/** The fll. */
+	/** A Full rating (100% full) */
 	FLL ("FULL");
 	
 	/** The choice. */

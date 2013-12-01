@@ -5,9 +5,11 @@ import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
-// TODO: Auto-generated Javadoc
 /**
- * The Class ParkingLotCallback.
+ * Utility class used by Retrofit for implementing a callback on POST.
+ * Why they can't use a synchronous POST is beyond me.
+ * This class is likely un-needed, but allows for easy change in the future
+ * if needed.
  */
 public class ParkingLotCallback implements Callback<ParkingLot> {
 

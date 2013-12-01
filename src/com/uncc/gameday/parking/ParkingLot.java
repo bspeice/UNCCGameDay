@@ -1,8 +1,9 @@
 package com.uncc.gameday.parking;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class ParkingLot.
+ * Basic POJO used for communicating information about each Parking lot
+ * between the Gameday app and server-side implementation
  */
 public class ParkingLot {
 	

@@ -14,13 +14,13 @@ import com.uncc.gameday.rest.GamedayService;
  */
 public class ParkingClient {
 
-	/** The gds. */
+	/** The GamedayService reference */
 	private GamedayService gds;
 	
 	/**
 	 * Instantiates a new parking client.
 	 *
-	 * @param c the c
+	 * @param c - The context used to access the Resource file
 	 */
 	public ParkingClient(Context c) {
 		RestAdapter ra = new RestAdapter.Builder()
@@ -30,7 +30,7 @@ public class ParkingClient {
 	}
 	
 	/**
-	 * List lots.
+	 * List all parking lots
 	 *
 	 * @return the list
 	 */
@@ -81,7 +81,7 @@ public class ParkingClient {
 	}
 	
 	/**
-	 * List lot location.
+	 * Get the coordinates for a specific parking lot
 	 *
 	 * @param p the p
 	 * @return the parking lot
@@ -93,7 +93,7 @@ public class ParkingClient {
 	}
 	
 	/**
-	 * List lot location.
+	 * Get the coordinates for a specific parking lot
 	 *
 	 * @param c the c
 	 * @return the parking lot

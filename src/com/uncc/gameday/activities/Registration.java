@@ -1,6 +1,7 @@
 package com.uncc.gameday.activities;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +10,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.uncc.gameday.R;
+import com.uncc.gameday.registration.Attendee;
+import com.uncc.gameday.registration.RegistrationClient;
 
 /**
  * The Class Registration.
@@ -33,7 +36,13 @@ public class Registration extends MenuActivity {
 	}
 	
 	public void onClick(View v) {
-		RSVPListener listener = new RSVPListener();
+		Attendee a = new Attendee();
+		a.setFirstName(((TextView)findViewById(R.id.editStudentFirstName)).getText().toString());
+		a.setLastName(((TextView)findViewById(R.id.editStudentLastName)).getText().toString());
+		a.setSection(((TextView)findViewById(R.id.editSectionNumber)).getText().toString());
+		a.setRow(Integer.parseInt(((TextView)findViewById(R.id.editRowNumber)).getText().toString()));
+		
+		RSVPListener listener = new RSVPListener(this, a);
 	
 		AlertDialog ad = new AlertDialog.Builder(this)
 		.setMessage("Are you ready to register with UNCC GAME DAY?")
@@ -67,10 +76,19 @@ public class Registration extends MenuActivity {
 	
 	private class RSVPListener implements OnClickListener {
 		
+		private Context c;
+		private Attendee a;
+		
+		public RSVPListener(Context c, Attendee a) {
+			this.c = c;
+			this.a = a;
+		}
+		
 		public void onClick(DialogInterface dialog, int which) {
 			
 			switch(which){
 				case DialogInterface.BUTTON_POSITIVE: // yes
+					new RegisterThread(a, c).start();
 					t.setText("Your registration has been accepted.  Welcome!");
 					break;
 				case DialogInterface.BUTTON_NEGATIVE: // no
@@ -83,6 +101,22 @@ public class Registration extends MenuActivity {
 					// nothing
 					break;
 			}
+		}
+	}
+	
+	private class RegisterThread extends Thread {
+		
+		Attendee a;
+		Context c;
+		
+		public RegisterThread(Attendee a, Context c) {
+			this.a = a;
+			this.c = c;
+		}
+		
+		public void run() {
+			RegistrationClient client = new RegistrationClient(c);
+			client.registerAttendee(a);
 		}
 	}
 }

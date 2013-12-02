@@ -91,9 +91,6 @@ public class AlertFetcher {
             
             String type = AlertType.getValue(AlertType.UNIVERSITY);
             pushToDatabase(statuses, type, ctx);
-            
-            System.out.println(statuses.get(0).getText());
-            // List contains all valid alerts now
         }
         
         /**

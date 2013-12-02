@@ -138,6 +138,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="15dp"
         android:text="@string/button_register"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:onClick="onClick" />
 
 </RelativeLayout>

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.SeekBar;
@@ -13,7 +14,6 @@ import android.widget.Toast;
 import com.uncc.gameday.R;
 import com.uncc.gameday.parking.ParkingChoice;
 import com.uncc.gameday.parking.ParkingClient;
-import com.uncc.gameday.parking.ParkingCoordinate;
 import com.uncc.gameday.parking.ParkingLot;
 import com.uncc.gameday.parking.RatingChoices;
 
@@ -39,14 +39,10 @@ public class LotViewFragment extends DialogFragment {
 	 *
 	 * @param pc - The Parking lot we need to get information for
 	 */
-	private void initializeData(ParkingChoice pc){
-		ParkingClient client = new ParkingClient(this.getActivity());
-		
-		ParkingLot pl = client.listLot(pc);
+	private void initializeData(ParkingLot pl){
 		ProgressBar bar = (ProgressBar)this.getView().findViewById(R.id.lotViewCurrentFilled);
 		bar.setProgress(pl.getFilledPct());
 		
-		ParkingCoordinate coord = client.listLotLocation(pc).getCoordinate();
 		// Set up the MapView here.
 	}
 	
@@ -69,8 +65,12 @@ public class LotViewFragment extends DialogFragment {
 
 		View view = inflater.inflate(R.layout.lot_view, container);
         getDialog().setTitle(pc.getValue());
-        initializeData(pc);
-
+        
+        // Initialize our data
+        new InitializeThread(pc, this).start();
+        
+        view.findViewById(R.id.lotViewSubmitRating).setOnClickListener(new SubmitListener(this));
+        
         if (view == null)
         	Log.e("LotViewFragment", "Unable to instantiate view!");
         return view;
@@ -79,9 +79,9 @@ public class LotViewFragment extends DialogFragment {
 	/**
 	 * Send a parking lot rating to the server
 	 */
-	public void onSubmitRating() {
+	public void onSubmitRating(View v) {
 		// Submit a rating to the server
-		SeekBar bar = (SeekBar)this.getView().findViewById(R.id.lotViewRateLot);
+		SeekBar bar = (SeekBar)this.getView().findViewById(R.id.lotViewLotRating);
 		int rating = bar.getProgress();
 		// Switch between values of parking rating
 		RatingChoices rc;
@@ -94,10 +94,58 @@ public class LotViewFragment extends DialogFragment {
 		else
 			rc = RatingChoices.FLL;
 		
-		ParkingClient pc = new ParkingClient(this.getActivity());
-		pc.rateLot(rc, this.pc);
-		
-		Toast.makeText(this.getActivity(), "Rating submitted!", Toast.LENGTH_SHORT).show();
+		new SubmitThread(this.pc, rc).start();
+		Toast.makeText(getActivity(), "Rating submitted!", Toast.LENGTH_SHORT).show();
 	}
+	
+	private class InitializeThread extends Thread {
+		
+		ParkingChoice pc;
+		LotViewFragment f;
+		
+		public InitializeThread(ParkingChoice pc, LotViewFragment f) {
+			this.pc = pc;
+			this.f = f;
+		}
 
+		@Override
+		public void run() {
+			ParkingClient client = new ParkingClient(f.getActivity());
+			ParkingLot pl = client.listLot(this.pc);
+			ParkingLot pl2 = client.listLotLocation(this.pc);
+			pl.setCoordinate(pl2.getCoordinate());
+			f.initializeData(pl);
+		}
+		
+	}
+	
+	private class SubmitThread extends Thread {
+		
+		ParkingChoice pc;
+		RatingChoices r;
+		
+		public SubmitThread(ParkingChoice pc, RatingChoices r) {
+			this.pc = pc;
+			this.r = r;
+		}
+		
+		public void run() {
+			ParkingClient pc = new ParkingClient(getActivity());
+			pc.rateLot(r, this.pc);
+		}
+	}
+	
+	private class SubmitListener implements OnClickListener {
+		LotViewFragment f;
+		
+		public SubmitListener(LotViewFragment f) {
+			this.f = f;
+		}
+
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			f.onSubmitRating(v);
+		}
+	}
 }

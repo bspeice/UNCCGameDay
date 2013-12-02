@@ -14,6 +14,8 @@ import com.uncc.gameday.parking.ParkingChoice;
  * The Class Parking.
  */
 public class Parking extends MenuActivity {
+	
+	LotViewFragment f;
 
 	/* (non-Javadoc)
 	 * @see com.uncc.gameday.activities.MenuActivity#onCreate(android.os.Bundle)
@@ -76,5 +78,7 @@ public class Parking extends MenuActivity {
 		// Note the setArguments() and getArguments() function
 		f.setArguments(fBundle);
 		f.show(fm, "lot_view");
+		this.f = f;
 	}
+	
 }

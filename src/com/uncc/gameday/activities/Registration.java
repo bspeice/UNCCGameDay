@@ -28,7 +28,7 @@ public class Registration extends MenuActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_registration);
         
-        //t=(TextView)findViewById(R.id.buttonRegister);
+        t=(TextView)findViewById(R.id.buttonRegister);
 
 	}
 	
@@ -70,18 +70,18 @@ public class Registration extends MenuActivity {
 		public void onClick(DialogInterface dialog, int which) {
 			
 			switch(which){
-			case DialogInterface.BUTTON_POSITIVE: // yes
-				t.setText("Your registration has been accepted.  Welcome!");
-				break;
-			case DialogInterface.BUTTON_NEGATIVE: // no
-				t.setText("You may come back and register at amy time.");
-				break;
-			case DialogInterface.BUTTON_NEUTRAL: // neutral
-				t.setText("Please correct any errors and select REGISTER.");
-				break;
-			default:
-				// nothing
-				break;
+				case DialogInterface.BUTTON_POSITIVE: // yes
+					t.setText("Your registration has been accepted.  Welcome!");
+					break;
+				case DialogInterface.BUTTON_NEGATIVE: // no
+					t.setText("You may come back and register at amy time.");
+					break;
+				case DialogInterface.BUTTON_NEUTRAL: // neutral
+					t.setText("Please correct any errors and select REGISTER.");
+					break;
+				default:
+					// nothing
+					break;
 			}
 		}
 	}

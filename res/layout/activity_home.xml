@@ -35,30 +35,39 @@
  	    android:layout_width="match_parent"
  	    android:layout_height="wrap_content"
  	    android:layout_weight="1"
- 	    android:background="@android:color/transparent" >
+ 	    android:background="@android:color/transparent"
+ 	     >
 
  	</ListView>
  
       </TableRow>
-      
-     
-      <TableRow
+
+    <TableRow
         android:id="@+id/tableRow3"
-	    android:layout_width="match_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/activity_vertical_margin"
-        android:layout_marginRight="@dimen/activity_horizontal_margin">
+        android:layout_marginRight="@dimen/activity_horizontal_margin" >
 
-         <Button
-             android:id="@+id/clearAlertsButton"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_span="2"
-             android:layout_weight="1"
-             android:text="@string/button_clear_alerts"
-             android:textColor="@color/black" />
-    
+        <Button
+            android:id="@+id/clearAlertsButton"
+            style="@style/Theme.Unccgameday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="1"
+            android:layout_weight="1"
+            android:text="@string/button_clear_alerts"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/refreshAlertsButton"
+            style="@style/Theme.Unccgameday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="1"
+            android:layout_weight="1"
+            android:text="@string/button_refresh_alerts"
+            android:textColor="@color/black" />
     </TableRow>
 
 </TableLayout>
-

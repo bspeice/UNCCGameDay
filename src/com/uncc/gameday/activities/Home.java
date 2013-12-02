@@ -1,7 +1,6 @@
 package com.uncc.gameday.activities;
 
 import java.util.List;
-
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Intent;
@@ -14,9 +13,6 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-
-
-
 import com.uncc.gameday.R;
 import com.uncc.gameday.alerts.Alert;
 import com.uncc.gameday.alerts.AlertDB;
@@ -38,11 +34,22 @@ public class Home extends MenuActivity {
 		setContentView(R.layout.activity_home);
 		
 		//ClearAllAlerts button
-		//sets list to display only unread alerts
+		//Clears any text in ListView
         final Button button = (Button) findViewById(R.id.clearAlertsButton);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-            	displayUnread();	
+        		ListView listView = (ListView)findViewById(R.id.alertsListView);
+        		listView.setAdapter(null);
+            }
+        });
+        
+		//Refresh Alerts button
+        //fetches most recent alerts
+        //displays them on listview
+        final Button button2 = (Button) findViewById(R.id.refreshAlertsButton);
+        button2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+            	displayList();
             }
         });
 		
@@ -65,20 +72,20 @@ public class Home extends MenuActivity {
 	public void displayList()
 	{
 		
-		final List<Alert> alerts = new AlertDB(this).fetchAll();
-		
+		final List<Alert> alerts = new AlertDB(this).fetchAll();	
 	    final ListView listView = (ListView)findViewById(R.id.alertsListView);
+	    
 	    final ArrayAdapter<Alert> adapter =
 	            new ArrayAdapter<Alert>(this,android.R.layout.simple_list_item_1, alerts);
 	    listView.setAdapter(adapter);
 	    
-	    //tap to delete alert from list and database
+	    //tap to delete alert from list
 	    listView.setOnItemClickListener(new OnItemClickListener()  {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position,
 					long id) {
-				deleteAlert(alerts.get(position));
-				displayList();
+				alerts.remove(alerts.get(position));
+				listView.setAdapter(adapter);
 			}	
 	    });
 	}
@@ -87,27 +94,6 @@ public class Home extends MenuActivity {
 	public void deleteAlert(Alert alert)
 	{
 		new AlertDB(this).deleteAlert(alert);
-	}
-	
-	//displays only unread alerts
-	public void displayUnread()
-	{
-		final List<Alert> alerts = new AlertDB(this).fetchUnread();
-		
-	    final ListView listView = (ListView)findViewById(R.id.alertsListView);
-	    final ArrayAdapter<Alert> adapter =
-	            new ArrayAdapter<Alert>(this,android.R.layout.simple_list_item_1, alerts);
-	    listView.setAdapter(adapter);
-	    
-	    //tap to delete alert from list and database
-	    listView.setOnItemClickListener(new OnItemClickListener()  {
-			@Override
-			public void onItemClick(AdapterView<?> parent, View view, int position,
-					long id) {
-				deleteAlert(alerts.get(position));
-				displayList();
-			}	
-	    });
 	}
 	
 	/**

@@ -32,7 +32,7 @@
         android:id="@+id/radioButtonPurple"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/puple_lot"
+        android:text="@string/purple_lot"
         android:textColor="@color/black"
         android1:textColorLink="@color/pressed_unccgameday"
         android:onClick="onRadioButtonClick" />

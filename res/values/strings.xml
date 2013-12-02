@@ -21,7 +21,7 @@
     <string name="server_hostname">uncc-gameday.no-ip.org</string> 
     <string name="student_check_in">Student Check-In</string>
     <string name="student_name">Student Name:</string>
-    <string name="student_organization">Organization:</string>
+    <string name="student_organization">Organization Name:</string>
     <string name="section_number">Section:</string>
     <string name="row_number">Row:</string>
     <string name="check_box_broadcast">Broadcast Information</string>
@@ -31,7 +31,7 @@
     <string name="organization_comments">Comments:</string>
     <string name="registration_view_check_ins">View Check-In List</string>
     <string name="button_save">Save</string>
-    <string name="title_parking_selection">Please Select a Parking Lot</string>
+    <string name="title_parking_selection">Select a Parking Lot</string>
     <string name="button_get_alerts">Get Alerts</string>
     <string name="select_university_alerts">University Alerts</string>
     <string name="select_organization_alerts">Organization Alerts</string>
@@ -44,17 +44,17 @@
     <string name="silver_lot">Silver Lot</string>
     <string name="orange_lot">Orange Lot</string>
     <string name="yellow_lot">Yellow Lot</string>
-    <string name="puple_lot">Purple Lot</string>
+    <string name="purple_lot">Purple Lot</string>
     <string name="pink_lot">Pink Lot</string>
     <string name="white_lot">White Lot</string>
     <string name="gold_lot">Gold Lot</string>
     <string name="title_enter_location">Enter a city:</string>
-
     <string name="button_clear_parking_choices">Clear Selections</string>
     <string name="button_get_lot_info">Get Parking Info</string>
+    <string name="button_register">Register</string>
+    <string name="registration_comments">Comments:</string>
+    <string name="parking_map">Parking Map</string>
+    <string name="search_hint">Enter and Organization/Person:</string>
+    <string name="search_text">Find who else is attending the UNCC football game! \n \nEnter the name of a person or organization into the search bar above.</string>  
     <string name="button_refresh_alerts">Refresh Alerts</string>
-        
-     
-    
-
 </resources>

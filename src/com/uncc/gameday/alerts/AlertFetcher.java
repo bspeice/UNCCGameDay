@@ -1,15 +1,10 @@
 package com.uncc.gameday.alerts;
 
-import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Iterator;
 import java.util.List;
-
-import twitter4j.Paging;
 import twitter4j.Status;
-import twitter4j.Twitter;
 import twitter4j.TwitterException;
-import twitter4j.TwitterFactory;
-import twitter4j.conf.ConfigurationBuilder;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
@@ -68,7 +63,7 @@ public class AlertFetcher {
             // Filter for anything created by us (retweet)
             for (Iterator<Status> it = statuses.iterator(); it.hasNext();){
                 // May need to switch to isRetweetByMe, not sure if
-        		// We're using the right function (documentation is awful)
+                        // We're using the right function (documentation is awful)
                 if (!it.next().isRetweet())
                         it.remove();
             }
@@ -134,13 +129,15 @@ public class AlertFetcher {
         //and persists to database
         public void pushToDatabase(List<Status> statuses, String type, Context ctx)
         {
-    		AlertDB db = new AlertDB(ctx);
-        	Date todayDate = new Date();
-        	todayDate.getTime();
-        	for(int i = 0; i < statuses.size(); i++)
-        	{
-        		Alert temp = new Alert(todayDate, statuses.get(i).getText(), 0, type);
-        		db.persist(temp);
-        	}
+        		GregorianCalendar todayDate = new GregorianCalendar();
+    			long currentDate = todayDate.getTimeInMillis();
+    			
+                AlertDB db = new AlertDB(ctx);
+                
+                for(int i = 0; i < statuses.size(); i++)
+                {
+                        Alert temp = new Alert(currentDate, statuses.get(i).getText(), 0, type);
+                        db.persist(temp);
+                }
         }
 }

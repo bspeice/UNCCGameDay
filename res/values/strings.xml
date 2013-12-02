@@ -10,7 +10,7 @@
     <string name="title_activity_alerts">Alerts</string>
     <string name="alerts_label_alerts_to_receive">Select Alerts to Receive:</string>
     <string name="alerts_check_timed">Timed (Reserve Ticket&#8230;)</string>
-    <string name="button_clear_alerts">Clear All Alerts</string>
+    <string name="button_clear_alerts">Clear Alerts</string>
     <string name="alerts_check_organizations">Organizations</string>
     <string name="alerts_check_university">University</string>
     <string name="home_label_recent_alerts">Recent Alerts:</string>
@@ -52,6 +52,7 @@
 
     <string name="button_clear_parking_choices">Clear Selections</string>
     <string name="button_get_lot_info">Get Parking Info</string>
+    <string name="button_refresh_alerts">Refresh Alerts</string>
         
      
     

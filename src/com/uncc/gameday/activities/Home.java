@@ -79,11 +79,12 @@ public class Home extends MenuActivity {
 	            new ArrayAdapter<Alert>(this,android.R.layout.simple_list_item_1, alerts);
 	    listView.setAdapter(adapter);
 	    
-	    //tap to delete alert from list
+	    //tap to delete alert from list and database
 	    listView.setOnItemClickListener(new OnItemClickListener()  {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position,
 					long id) {
+				deleteAlert(alerts.get(position));
 				alerts.remove(alerts.get(position));
 				listView.setAdapter(adapter);
 			}	

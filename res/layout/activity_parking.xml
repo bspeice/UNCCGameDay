@@ -32,7 +32,8 @@
         android:text="@string/silver_lot"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:onClick="onButtonClick" />
 
     <Button
         android:id="@+id/buttonOrange"
@@ -46,7 +47,8 @@
         android:text="@string/orange_lot"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:onClick="onButtonClick" />
 
     <Button
         android:id="@+id/buttonRed"
@@ -59,7 +61,8 @@
         android:text="@string/red_lot"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:onClick="onButtonClick" />
 
     <Button
         android:id="@+id/buttonPurple"
@@ -72,7 +75,8 @@
         android:text="@string/purple_lot"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:onClick="onButtonClick" />
 
     <ImageView
         android:id="@+id/imageView1"
@@ -99,7 +103,8 @@
         android:text="@string/white_lot"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:onClick="onButtonClick" />
 
     <Button
         android:id="@+id/buttonPink"
@@ -112,7 +117,8 @@
         android:text="@string/pink_lot"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:onClick="onButtonClick" />
 
     <Button
         android:id="@+id/buttonYellow"
@@ -125,7 +131,8 @@
         android:text="@string/yellow_lot"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:onClick="onButtonClick" />
 
     <Button
         android:id="@+id/buttonBlack"
@@ -139,7 +146,8 @@
         android:text="@string/black_lot"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:onClick="onButtonClick" />
 
     <Button
         android:id="@+id/buttonBlue"
@@ -152,7 +160,8 @@
         android:text="@string/blue_lot"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:onClick="onButtonClick" />
 
     <Button
         android:id="@+id/buttonGold"
@@ -165,7 +174,8 @@
         android:text="@string/gold_lot"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:onClick="onButtonClick" />
 
     <Button
         android:id="@+id/buttonGreen"
@@ -178,6 +188,7 @@
         android:text="@string/green_lot"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:onClick="onButtonClick" />
 
 </RelativeLayout>

@@ -55,21 +55,6 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <EditText
-        android:id="@+id/editStudentName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/studentName"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textColor="@color/black"
-        android:textColorLink="@color/black" >
-
-        <requestFocus android:layout_height="match_parent" />
-
-    </EditText>
-
-    <EditText
         android:id="@+id/editOrganizationName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -137,7 +122,17 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="15dp"
+        android:gravity="center_horizontal|center_vertical"
         android:text="@string/button_register"
         android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/studentName"
+        android:layout_below="@+id/studentName"
+        android:ems="10"
+        android:inputType="textPersonName" />
 
 </RelativeLayout>

@@ -20,7 +20,7 @@
     <string name="preferences_file">GamedayPreferences</string>
     <string name="server_hostname">uncc-gameday.no-ip.org</string> 
     <string name="student_check_in">Student Check-In</string>
-    <string name="student_name">Full Name:</string>
+    <string name="student_name">First Name, Last Name:</string>
     <string name="section_number">Section:</string>
     <string name="row_number">Row:</string>
     <string name="check_box_broadcast">Broadcast Information</string>

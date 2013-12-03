@@ -31,7 +31,7 @@ public class Parking extends MenuActivity {
 	 *
 	 * @param v the v
 	 */
-	public void onRadioButtonClick(View v) {
+	public void onButtonClick(View v) {
 		// Set up some initial fragment boilerplate
 		FragmentManager fm = this.getFragmentManager();
 		LotViewFragment f = new LotViewFragment();
@@ -39,37 +39,37 @@ public class Parking extends MenuActivity {
 		
 		// Get the actual parking lot we will load (store as a String)
 		switch (v.getId()) {
-			case R.id.radioButtonBlack:
+			case R.id.buttonBlack:
 				fBundle.putCharArray("CHOICE", ParkingChoice.BLACK.getValue().toCharArray());
 				break;
-			case R.id.radioButtonBlue:
+			case R.id.buttonBlue:
 				fBundle.putCharArray("CHOICE", ParkingChoice.BLUE.getValue().toCharArray());
 				break;
-			case R.id.radioButtonGold:
+			case R.id.buttonGold:
 				fBundle.putCharArray("CHOICE", ParkingChoice.GOLD.getValue().toCharArray());
 				break;
-			case R.id.radioButtonGreen:
+			case R.id.buttonGreen:
 				fBundle.putCharArray("CHOICE", ParkingChoice.GREEN.getValue().toCharArray());
 				break;
-			case R.id.radioButtonOrange:
+			case R.id.buttonOrange:
 				fBundle.putCharArray("CHOICE", ParkingChoice.ORANGE.getValue().toCharArray());
 				break;
-			case R.id.radioButtonPink:
+			case R.id.buttonPink:
 				fBundle.putCharArray("CHOICE", ParkingChoice.PINK.getValue().toCharArray());
 				break;
-			case R.id.radioButtonPurple:
+			case R.id.buttonPurple:
 				fBundle.putCharArray("CHOICE", ParkingChoice.PURPLE.getValue().toCharArray());
 				break;
-			case R.id.radioButtonRed:
+			case R.id.buttonRed:
 				fBundle.putCharArray("CHOICE", ParkingChoice.RED.getValue().toCharArray());
 				break;
-			case R.id.radioButtonSilver:
+			case R.id.buttonSilver:
 				fBundle.putCharArray("CHOICE", ParkingChoice.SILVER.getValue().toCharArray());
 				break;
-			case R.id.radioButtonWhite:
+			case R.id.buttonWhite:
 				fBundle.putCharArray("CHOICE", ParkingChoice.WHITE.getValue().toCharArray());
 				break;
-			case R.id.radioButtonYellow:
+			case R.id.buttonYellow:
 				fBundle.putCharArray("CHOICE", ParkingChoice.YELLOW.getValue().toCharArray());
 				break;
 		}

@@ -1,6 +1,5 @@
-<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:tools="http://schemas.android.com/tool"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:android1="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#7d9a43"
@@ -9,114 +8,176 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Parking" >
-<TextView
-    android1:id="@+id/textViewSelectLot"
-    android1:layout_width="wrap_content"
-    android1:layout_height="wrap_content"
-    android1:layout_alignParentLeft="true"
-    android1:layout_alignParentTop="true"
-    android1:layout_marginTop="5dp"
-    android1:text="@string/title_parking_selection"
-    android1:textAppearance="?android:attr/textAppearanceSmall"
-    android1:textColor="@color/black" />
-    
-<RadioGroup
-    android1:id="@+id/radioGroup1"
-    android1:layout_width="wrap_content"
-    android1:layout_height="wrap_content"
-    android1:layout_alignLeft="@+id/textViewSelectLot"
-    android1:layout_below="@+id/textViewSelectLot"
-    android1:layout_marginTop="10dp" >
 
-    <RadioButton
-        android:id="@+id/radioButtonPurple"
+    <TextView
+        android:id="@+id/textViewSelectLot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:text="@string/title_parking_selection"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/buttonSilver"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonRed"
+        android:layout_below="@+id/buttonRed"
+        android:layout_centerHorizontal="true"
+        android:gravity="left|center_vertical"
+        android:text="@string/silver_lot"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonOrange"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonBlack"
+        android:layout_alignBottom="@+id/buttonBlack"
+        android:layout_centerHorizontal="true"
+        android:gravity="left|center_vertical"
+        android:text="@string/orange_lot"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonRed"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonPurple"
+        android:layout_below="@+id/buttonPurple"
+        android:gravity="left|center_vertical"
+        android:text="@string/red_lot"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonPurple"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonGold"
+        android:layout_toLeftOf="@+id/buttonPink"
+        android:gravity="left|center_vertical"
         android:text="@string/purple_lot"
         android:textColor="@color/black"
-        android1:textColorLink="@color/pressed_unccgameday"
-        android:onClick="onRadioButtonClick" />
-   
-    <RadioButton
-        android1:id="@+id/radioButtonGreen"
-        android1:layout_width="wrap_content"
-        android1:layout_height="wrap_content"
-        android1:text="@string/green_lot"
-        android1:textColor="@color/black"
-        android:onClick="onRadioButtonClick" />
+        android:textSize="12sp"
+        android:textStyle="bold" />
 
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewSelectLot"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/parking_map"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:scaleType="fitCenter"
+        android:src="@drawable/parking_map" />
 
-    <RadioButton
-        android1:id="@+id/radioButtonSilver"
-        android1:layout_width="wrap_content"
-        android1:layout_height="wrap_content"
-        android1:text="@string/silver_lot"
-        android1:textColor="@color/black"
-        android:onClick="onRadioButtonClick" />
+    <Button
+        android:id="@+id/buttonWhite"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonPurple"
+        android:layout_alignLeft="@+id/buttonPink"
+        android:gravity="left|center_vertical"
+        android:text="@string/white_lot"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold" />
 
-    <RadioButton
-        android1:id="@+id/radioButtonYellow"
-        android1:layout_width="wrap_content"
-        android1:layout_height="wrap_content"
-        android1:text="@string/yellow_lot"
-        android1:textColor="@color/black"
-        android:onClick="onRadioButtonClick" />
+    <Button
+        android:id="@+id/buttonPink"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonRed"
+        android:layout_toRightOf="@+id/buttonOrange"
+        android:gravity="left|center_vertical"
+        android:text="@string/pink_lot"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold" />
 
-    <RadioButton
-        android1:id="@+id/radioButtonBlue"
-        android1:layout_width="wrap_content"
-        android1:layout_height="wrap_content"
-        android1:text="@string/blue_lot"
-        android1:textColor="@color/black"
-        android:onClick="onRadioButtonClick" />
+    <Button
+        android:id="@+id/buttonYellow"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonSilver"
+        android:layout_alignLeft="@+id/buttonPink"
+        android:gravity="left|center_vertical"
+        android:text="@string/yellow_lot"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold" />
 
-    <RadioButton
-        android1:id="@+id/radioButtonBlack"
-        android1:layout_width="wrap_content"
-        android1:layout_height="wrap_content"
-        android1:text="@string/black_lot"
-        android1:textColor="@color/black"
-        android:onClick="onRadioButtonClick" />
+    <Button
+        android:id="@+id/buttonBlack"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="49dp"
+        android:layout_toLeftOf="@+id/buttonOrange"
+        android:gravity="left|center_vertical"
+        android:text="@string/black_lot"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold" />
 
-    <RadioButton
-        android1:id="@+id/radioButtonGold"
-        android1:layout_width="wrap_content"
-        android1:layout_height="wrap_content"
-        android1:text="@string/gold_lot"
-        android1:textColor="@color/black"
-        android:onClick="onRadioButtonClick" />
+    <Button
+        android:id="@+id/buttonBlue"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonBlack"
+        android:layout_toLeftOf="@+id/buttonOrange"
+        android:gravity="left|center_vertical"
+        android:text="@string/blue_lot"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold" />
 
-    <RadioButton
-        android1:id="@+id/radioButtonWhite"
-        android1:layout_width="wrap_content"
-        android1:layout_height="wrap_content"
-        android1:text="@string/white_lot"
-        android1:textColor="@color/black"
-        android:onClick="onRadioButtonClick" />
+    <Button
+        android:id="@+id/buttonGold"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonBlue"
+        android:layout_toLeftOf="@+id/buttonOrange"
+        android:gravity="left|center_vertical"
+        android:text="@string/gold_lot"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold" />
 
-    <RadioButton
-        android1:id="@+id/radioButtonPink"
-        android1:layout_width="wrap_content"
-        android1:layout_height="wrap_content"
-        android1:text="@string/pink_lot"
-        android1:textColor="@color/black"
-        android:onClick="onRadioButtonClick" />
-
-    <RadioButton
-        android1:id="@+id/radioButtonRed"
-        android1:layout_width="wrap_content"
-        android1:layout_height="wrap_content"
-        android1:text="@string/red_lot"
-        android1:textColor="@color/black"
-        android:onClick="onRadioButtonClick" />
-    
-    <RadioButton
-         android1:id="@+id/radioButtonOrange"
-         android1:layout_width="wrap_content"
-         android1:layout_height="wrap_content"
-         android1:text="@string/orange_lot"
-         android1:textColor="@color/black"
-         android:onClick="onRadioButtonClick" />
-</RadioGroup>
+    <Button
+        android:id="@+id/buttonGreen"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonGold"
+        android:layout_toLeftOf="@+id/buttonOrange"
+        android:gravity="left|center_vertical"
+        android:text="@string/green_lot"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

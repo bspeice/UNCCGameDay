@@ -11,24 +11,24 @@
     tools:ignore="Overdraw" >
 
     <TextView
-        android:id="@+id/studentFirstName"
+        android:id="@+id/studentName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="10dp"
-        android:text="@string/student_first_name"
+        android:text="@string/student_name"
         android:textAllCaps="false"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/black" />
+        android:textColor="@color/black" 
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
-        android:id="@+id/studentLastName"
+        android:id="@+id/studentOrganization"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/studentFirstName"
+        android:layout_below="@+id/studentName"
         android:layout_marginTop="40dp"
-        android:text="@string/student_last_name"
+        android:text="@string/organization_check_in"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="@color/black" />
 
@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/studentLastName"
+        android:layout_below="@+id/studentOrganization"
         android:layout_marginTop="40dp"
         android:text="@string/section_number"
         android:textColor="@color/black" 
@@ -55,11 +55,11 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <EditText
-        android:id="@+id/editStudentFirstName"
+        android:id="@+id/editStudentName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/studentFirstName"
+        android:layout_below="@+id/studentName"
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="@color/black"
@@ -70,11 +70,11 @@
     </EditText>
 
     <EditText
-        android:id="@+id/editStudentLastName"
+        android:id="@+id/editOrganizationName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/studentLastName"
+        android:layout_below="@+id/studentOrganization"
         android:ems="10"
         android:inputType="text"
         android:textColor="@color/black"
@@ -100,12 +100,32 @@
         android:inputType="number"
         android:textColor="@color/black" />
 
+    <TextView
+        android:id="@+id/addComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editRowNumber"
+        android:layout_below="@+id/editRowNumber"
+        android:layout_marginTop="14dp"
+        android:text="@string/registration_comments"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/editComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/addComment"
+        android:layout_below="@+id/addComment"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textColor="@color/black" />
+
     <CheckBox
         android:id="@+id/checkBoxBroadcastInfo"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editRowNumber"
-        android:layout_below="@+id/editRowNumber"
+        android:layout_alignLeft="@+id/editComments"
+        android:layout_below="@+id/editComments"
         android:layout_marginTop="20dp"
         android:text="@string/check_box_broadcast"
         android:textColor="@color/black" />
@@ -118,7 +138,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="15dp"
         android:text="@string/button_register"
-        android:textColor="@color/black"
-        android:onClick="onClick" />
+        android:textColor="@color/black" />
 
 </RelativeLayout>

@@ -54,6 +54,8 @@ public class MenuActivity extends Activity {
     		case R.id.action_home:
     			startActivity(new Intent(this, Home.class));
     			break;
+    		case R.id.action_search_rsvp:
+    			startActivity(new Intent(this, Search.class));
     	}
 		return true;
     }

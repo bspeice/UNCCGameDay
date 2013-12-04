@@ -57,4 +57,5 @@
     <string name="search_hint">Enter and Organization/Person:</string>
     <string name="search_text">Find who else is attending the UNCC football game! \n \nEnter the name of a person or organization into the search bar above.</string>  
     <string name="button_refresh_alerts">Refresh Alerts</string>
+    <string name="title_activity_search_rsvp">RSVP Search</string>
 </resources>

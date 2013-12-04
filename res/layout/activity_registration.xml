@@ -75,7 +75,8 @@
         android:layout_alignLeft="@+id/studentFirstName"
         android:layout_below="@+id/studentFirstName"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textColor="@color/black"  />
 
     <TextView
         android:id="@+id/sectionNumber"

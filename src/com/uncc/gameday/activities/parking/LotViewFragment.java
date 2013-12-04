@@ -2,7 +2,6 @@ package com.uncc.gameday.activities.parking;
 
 import android.app.DialogFragment;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -17,7 +16,6 @@ import com.uncc.gameday.parking.ParkingClient;
 import com.uncc.gameday.parking.ParkingLot;
 import com.uncc.gameday.parking.RatingChoices;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class LotViewFragment.
  */
@@ -71,8 +69,6 @@ public class LotViewFragment extends DialogFragment {
         
         view.findViewById(R.id.lotViewSubmitRating).setOnClickListener(new SubmitListener(this));
         
-        if (view == null)
-        	Log.e("LotViewFragment", "Unable to instantiate view!");
         return view;
     }
 	
@@ -144,7 +140,6 @@ public class LotViewFragment extends DialogFragment {
 
 		@Override
 		public void onClick(View v) {
-			// TODO Auto-generated method stub
 			f.onSubmitRating(v);
 		}
 	}

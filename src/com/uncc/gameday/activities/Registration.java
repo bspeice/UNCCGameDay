@@ -1,13 +1,15 @@
 package com.uncc.gameday.activities;
 
+import retrofit.RetrofitError;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.os.Bundle;
-import android.view.View;
 import android.content.DialogInterface.OnClickListener;
-import android.widget.Button;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.uncc.gameday.R;
 import com.uncc.gameday.registration.Attendee;
@@ -22,7 +24,6 @@ public class Registration extends MenuActivity {
 	 * @see com.uncc.gameday.activities.MenuActivity#onCreate(android.os.Bundle)
 	 */
 	
-	private Button b;
 	private TextView t;
 	
 	
@@ -115,8 +116,13 @@ public class Registration extends MenuActivity {
 		}
 		
 		public void run() {
-			RegistrationClient client = new RegistrationClient(c);
-			client.registerAttendee(a);
+			try {
+				RegistrationClient client = new RegistrationClient(c);
+				client.registerAttendee(a);
+			} catch (RetrofitError e) {
+				Toast.makeText(c, R.string.internet_down_error, Toast.LENGTH_SHORT).show();
+				Log.e("Registration", e.getLocalizedMessage());
+			}
 		}
 	}
 }

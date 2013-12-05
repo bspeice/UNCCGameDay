@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="GameDayTheme" parent="android:Theme.Black">
+
+    <item name="android:editTextStyle">@style/EditTextGameDayTheme</item>
+
+    <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewGameDayTheme</item>
+
+    <item name="android:checkboxStyle">@style/CheckBoxGameDayTheme</item>
+
+    <item name="android:radioButtonStyle">@style/RadioButtonGameDayTheme</item>
+
+    <item name="android:buttonStyle">@style/ButtonGameDayTheme</item>
+
+    <item name="android:imageButtonStyle">@style/ImageButtonGameDayTheme</item>
+
+    <item name="android:spinnerStyle">@style/SpinnerGameDayTheme</item>
+
+    <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItemGameDayTheme</item>
+
+    <item name="android:tabWidgetStyle">@style/TabWidgetGameDayTheme</item>
+
+    <item name="android:progressBarStyleHorizontal">@style/ProgressBarGameDayTheme</item>
+
+    <item name="android:seekBarStyle">@style/SeekBarGameDayTheme</item>
+
+    <item name="android:ratingBarStyle">@style/RatingBarGameDayTheme</item>
+
+    <item name="android:ratingBarStyleIndicator">@style/RatingBarBigGameDayTheme</item>
+
+    <item name="android:ratingBarStyleSmall">@style/RatingBarSmallGameDayTheme</item>
+
+    <item name="android:buttonStyleToggle">@style/ToggleGameDayTheme</item>
+
+    <item name="android:listViewStyle">@style/ListViewGameDayTheme</item>
+
+    <item name="android:listViewWhiteStyle">@style/ListViewGameDayTheme.White</item>
+
+    <item name="android:spinnerItemStyle">@style/SpinnerItemGameDayTheme</item>
+
+  </style>
+
+</resources>

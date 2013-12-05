@@ -2,7 +2,6 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" 
-    android:background="#7d9a43"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -13,7 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/alerts_label_alerts_to_receive"
-        android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/black" />
 
     <CheckBox
@@ -21,15 +19,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/alerts_check_timed"
-        android:textColor="@color/black" 
-        android:onClick="onClickTimedAlerts" />
+        android:onClick="onClickTimedAlerts"
+        style="@style/GameDayTheme" />
 
     <CheckBox
         android:id="@+id/alerts_check_organizations"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/alerts_check_organizations"
-        android:textColor="@color/black" 
+		style="@style/GameDayTheme"
         android:onClick="onClickOrganizationAlerts" />
 
     <CheckBox
@@ -37,8 +35,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/alerts_check_university"
-        android:textColor="@color/black" 
-        android:onClick="onClickUniversityAlerts" />
+        android:onClick="onClickUniversityAlerts"
+        style="@style/GameDayTheme" />
 
     <Button
         android:id="@+id/getAlertsButton"
@@ -46,6 +44,7 @@
         android:layout_height="wrap_content"
         android:gravity="left|center_vertical"
         android:text="@string/button_get_alerts"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        style="@style/GameDayTheme" />
 
 </LinearLayout>

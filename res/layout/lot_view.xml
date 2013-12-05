@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tool"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical" >
 
     <LinearLayout
@@ -12,12 +17,10 @@
             android:id="@+id/lotViewFilledStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Filled Status:"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:text="@string/filled_status"/>
 
         <ProgressBar
             android:id="@+id/lotViewCurrentFilled"
-            style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content" />
 
@@ -27,8 +30,7 @@
         android:id="@+id/lotViewRateLot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rate Lot:"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:text="@string/rate_lot" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,30 +41,29 @@
             android:id="@+id/lotViewEmpty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Empty"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:text="@string/empty_lot"/>
 
         <SeekBar
             android:id="@+id/lotViewLotRating"
-            android:layout_width="match_parent"
+            android:layout_width="0dip"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1" 
+            style="@style/GameDayTheme"/>
 
         <TextView
             android:id="@+id/lotViewFull"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Full"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:text="@string/full_lot" />
 
     </LinearLayout>
 
     <Button
         android:id="@+id/lotViewSubmitRating"
-        style="?android:attr/buttonStyleSmall"
+        style="@style/GameDayTheme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit Rating" 
+        android:text="@string/submit_rating" 
         android:onClick="onSubmitRating" />
 
 </LinearLayout>

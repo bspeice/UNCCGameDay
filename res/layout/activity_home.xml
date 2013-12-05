@@ -3,7 +3,6 @@
     android:id="@+id/TableLayout1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#7d9a43"
     tools:context=".activities.MenuActivity" >
 
     <TableRow
@@ -16,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/home_label_recent_alerts"
-            android:textColor="@color/black" />
+            android:textColor="@color/green" />
  
     </TableRow>
 
@@ -27,7 +26,7 @@
         android:layout_marginLeft="@dimen/activity_vertical_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_weight="1"
-        android:background="@color/eggshell">
+>
  	<requestFocus/>
 
  	<ListView
@@ -35,7 +34,7 @@
  	    android:layout_width="match_parent"
  	    android:layout_height="wrap_content"
  	    android:layout_weight="1"
- 	    android:background="@color/pressed_unccgameday" >
+ 	    android:background="@color/black" >
 
  	</ListView>
  
@@ -50,7 +49,7 @@
 
         <Button
             android:id="@+id/clearAlertsButton"
-            style="@style/Theme.Unccgameday"
+            style="@style/GameDayTheme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_span="1"
@@ -60,9 +59,9 @@
 
         <Button
             android:id="@+id/refreshAlertsButton"
-            style="@style/Theme.Unccgameday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="@style/GameDayTheme"
             android:layout_span="1"
             android:layout_weight="1"
             android:text="@string/button_refresh_alerts"

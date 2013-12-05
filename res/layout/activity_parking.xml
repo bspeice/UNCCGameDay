@@ -2,7 +2,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7d9a43"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -18,13 +17,13 @@
         android:layout_marginTop="5dp"
         android:text="@string/title_parking_selection"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/black" />
+        android:textColor="@color/green" />
 
     <Button
         android:id="@+id/buttonSilver"
-        style="?android:attr/buttonStyleSmall"
+        style="@style/GameDayTheme"
         android:layout_width="85dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_alignLeft="@+id/buttonRed"
         android:layout_below="@+id/buttonRed"
         android:layout_centerHorizontal="true"
@@ -37,9 +36,9 @@
 
     <Button
         android:id="@+id/buttonOrange"
-        style="?android:attr/buttonStyleSmall"
+        style="@style/GameDayTheme"
         android:layout_width="85dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_alignBaseline="@+id/buttonBlack"
         android:layout_alignBottom="@+id/buttonBlack"
         android:layout_centerHorizontal="true"
@@ -52,9 +51,9 @@
 
     <Button
         android:id="@+id/buttonRed"
-        style="?android:attr/buttonStyleSmall"
+        style="@style/GameDayTheme"
         android:layout_width="85dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_alignLeft="@+id/buttonPurple"
         android:layout_below="@+id/buttonPurple"
         android:gravity="left|center_vertical"
@@ -66,9 +65,9 @@
 
     <Button
         android:id="@+id/buttonPurple"
-        style="?android:attr/buttonStyleSmall"
+        style="@style/GameDayTheme"
         android:layout_width="85dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_above="@+id/buttonGold"
         android:layout_toLeftOf="@+id/buttonPink"
         android:gravity="left|center_vertical"
@@ -80,26 +79,27 @@
 
     <ImageView
         android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewSelectLot"
+        android:layout_width="320dp"
+        android:layout_height="250dp"
+        android:layout_alignTop="@+id/textViewSelectLot"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"
         android:adjustViewBounds="true"
+        android:clickable="true"
         android:contentDescription="@string/parking_map"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:scaleType="fitCenter"
+        android:scaleType="centerCrop"
         android:src="@drawable/parking_map" />
 
     <Button
         android:id="@+id/buttonWhite"
-        style="?android:attr/buttonStyleSmall"
+        style="@style/GameDayTheme"
         android:layout_width="85dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_above="@+id/buttonPurple"
         android:layout_alignLeft="@+id/buttonPink"
         android:gravity="left|center_vertical"
+        android:layout_alignParentRight="true"
         android:text="@string/white_lot"
         android:textColor="@color/black"
         android:textSize="12sp"
@@ -108,12 +108,13 @@
 
     <Button
         android:id="@+id/buttonPink"
-        style="?android:attr/buttonStyleSmall"
+        style="@style/GameDayTheme"
         android:layout_width="85dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_above="@+id/buttonRed"
         android:layout_toRightOf="@+id/buttonOrange"
         android:gravity="left|center_vertical"
+        android:layout_alignParentRight="true"
         android:text="@string/pink_lot"
         android:textColor="@color/black"
         android:textSize="12sp"
@@ -122,12 +123,13 @@
 
     <Button
         android:id="@+id/buttonYellow"
-        style="?android:attr/buttonStyleSmall"
+		style="@style/GameDayTheme"
         android:layout_width="85dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_above="@+id/buttonSilver"
         android:layout_alignLeft="@+id/buttonPink"
         android:gravity="left|center_vertical"
+        android:layout_alignParentRight="true"
         android:text="@string/yellow_lot"
         android:textColor="@color/black"
         android:textSize="12sp"
@@ -136,13 +138,14 @@
 
     <Button
         android:id="@+id/buttonBlack"
-        style="?android:attr/buttonStyleSmall"
+        style="@style/GameDayTheme"
         android:layout_width="85dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_below="@+id/imageView1"
-        android:layout_marginTop="49dp"
+        android:layout_marginTop="20dp"
         android:layout_toLeftOf="@+id/buttonOrange"
         android:gravity="left|center_vertical"
+        android:layout_alignParentLeft="true"
         android:text="@string/black_lot"
         android:textColor="@color/black"
         android:textSize="12sp"
@@ -151,12 +154,13 @@
 
     <Button
         android:id="@+id/buttonBlue"
-        style="?android:attr/buttonStyleSmall"
+        style="@style/GameDayTheme"
         android:layout_width="85dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_below="@+id/buttonBlack"
         android:layout_toLeftOf="@+id/buttonOrange"
         android:gravity="left|center_vertical"
+        android:layout_alignParentLeft="true"
         android:text="@string/blue_lot"
         android:textColor="@color/black"
         android:textSize="12sp"
@@ -165,12 +169,13 @@
 
     <Button
         android:id="@+id/buttonGold"
-        style="?android:attr/buttonStyleSmall"
+        style="@style/GameDayTheme"
         android:layout_width="85dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_below="@+id/buttonBlue"
         android:layout_toLeftOf="@+id/buttonOrange"
         android:gravity="left|center_vertical"
+        android:layout_alignParentLeft="true"
         android:text="@string/gold_lot"
         android:textColor="@color/black"
         android:textSize="12sp"
@@ -179,13 +184,14 @@
 
     <Button
         android:id="@+id/buttonGreen"
-        style="?android:attr/buttonStyleSmall"
+        style="@style/GameDayTheme"
         android:layout_width="85dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_below="@+id/buttonGold"
         android:layout_toLeftOf="@+id/buttonOrange"
         android:gravity="left|center_vertical"
         android:text="@string/green_lot"
+        android:layout_alignParentLeft="true"
         android:textColor="@color/black"
         android:textSize="12sp"
         android:textStyle="bold"

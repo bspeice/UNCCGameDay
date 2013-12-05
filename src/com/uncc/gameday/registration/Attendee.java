@@ -112,4 +112,8 @@ public class Attendee {
 	public void setId(int id) {
 		this.id = id;
 	}
+	
+    public String toString() {
+        return this.getFirstName() + " " + this.getLastName() + ": Section " + getSection() + ", Row " + getRow();
+}
 }

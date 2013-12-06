@@ -58,7 +58,7 @@ public class Search extends MenuActivity {
 			runOnUiThread(new Runnable() {
 				@Override
 				public void run() {
-					ListView listView = (ListView)findViewById(R.id.RSVPListView);
+					ListView listView = (ListView)findViewById(R.id.textView1);
 				    ArrayAdapter<Attendee> adapter =
 				            new ArrayAdapter<Attendee>(c,android.R.layout.simple_list_item_1, rsvpList);
 				    listView.setAdapter(adapter);	

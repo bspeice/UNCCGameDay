@@ -166,7 +166,7 @@ public class AlertDB extends SQLiteOpenHelper {
         	//for each alert in database
         	//add it to alert list to be shown
         	//and modify it in DB to be classified as shown
-        	int i = 0;
+        
         	if (cursor.moveToFirst())
         		{
         		
@@ -183,9 +183,9 @@ public class AlertDB extends SQLiteOpenHelper {
         				alert.setShown(cursor.getInt(2));
 				
         				alertList.add(alert);
-        				i++;
+        			
         			}
-        		} while (cursor.moveToNext() && i < 10);
+        		} while (cursor.moveToNext());
 			
         		}	
         	db.close();	
@@ -236,11 +236,11 @@ public class AlertDB extends SQLiteOpenHelper {
         				alert.setAlarmDate(cursor.getLong(1));
         				alert.setShown(cursor.getInt(2));
 					
-        				updateAlert(alert);
+        				
         				alertList.add(alert);
         				i++;
         			}
-        		} while (cursor.moveToNext() && i < 1);
+        		} while (cursor.moveToNext());
         	}	
         	db.close();
 		
@@ -255,6 +255,14 @@ public class AlertDB extends SQLiteOpenHelper {
         		}
 			
         	});
+        	
+        	if(i > 0)
+        	{
+        		Alert temp = alertList.get(0);
+        		alertList.clear();
+        		alertList.add(temp);
+        		updateAlert(temp);
+        	}
         	return alertList;
 	}
 

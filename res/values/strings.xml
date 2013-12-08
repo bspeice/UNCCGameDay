@@ -63,6 +63,7 @@
     <string name="full_lot">Full </string>
     <string name="submit_rating">Submit Rating</string>
     <string name="filled_status">Filled Status</string>
+    <string name="crowd">Crowd</string>
     <string name="title_activity_search_rsvp">RSVP Search</string>
     <string name="internet_down_error">Internet access is currently unavailable.</string>
 </resources>

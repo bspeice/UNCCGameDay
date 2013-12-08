@@ -1,4 +1,5 @@
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/TableLayout1"
     android:layout_width="fill_parent"
@@ -40,32 +41,42 @@
  
       </TableRow>
 
-    <TableRow
-        android:id="@+id/tableRow3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/activity_vertical_margin"
-        android:layout_marginRight="@dimen/activity_horizontal_margin" >
+     <LinearLayout
+        android:orientation="vertical"
+        
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            
+            >
 
         <Button
             android:id="@+id/clearAlertsButton"
-            style="@style/GameDayTheme"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_span="1"
-            android:layout_weight="1"
+			android:background="@drawable/register"
             android:text="@string/button_clear_alerts"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            tools:ignore="ButtonStyle"
+            android:layout_weight="1" />
 
         <Button
             android:id="@+id/refreshAlertsButton"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            style="@style/GameDayTheme"
-            android:layout_span="1"
-            android:layout_weight="1"
+            android:background="@drawable/register"
             android:text="@string/button_refresh_alerts"
-            android:textColor="@color/black" />
-    </TableRow>
+            android:textColor="@color/black"
+            tools:ignore="ButtonStyle" 
+            android:layout_weight="1"/>
+			
+
+    </LinearLayout>
+    </LinearLayout>
 
 </TableLayout>

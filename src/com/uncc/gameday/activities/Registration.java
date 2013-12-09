@@ -120,7 +120,11 @@ public class Registration extends MenuActivity {
 				RegistrationClient client = new RegistrationClient(c);
 				client.registerAttendee(a);
 			} catch (RetrofitError e) {
-				Toast.makeText(c, R.string.internet_down_error, Toast.LENGTH_SHORT).show();
+				runOnUiThread(new Thread(){
+					public void run(){
+						Toast.makeText(c, R.string.internet_down_error, Toast.LENGTH_SHORT).show();
+					}
+				});
 				Log.e("Registration", e.getLocalizedMessage());
 			}
 		}

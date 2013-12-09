@@ -47,8 +47,13 @@ public class Search extends MenuActivity {
 				rsvpList = client.listAttendees();
 				listFetched = true;
 			} catch (RetrofitError e) {
-				Toast.makeText(c, R.string.internet_down_error,
-						Toast.LENGTH_SHORT).show();
+				runOnUiThread(new Thread(){
+					public void run(){
+						Toast.makeText(c, R.string.internet_down_error,
+								Toast.LENGTH_SHORT).show();
+					}
+				});
+				
 				Log.e("Search", e.getMessage());
 			}
 

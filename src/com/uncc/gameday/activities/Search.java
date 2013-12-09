@@ -63,7 +63,7 @@ public class Search extends MenuActivity {
 					@Override
 					public int compare(Attendee a1, Attendee a2) {
 						String compareName = a1.getLastName().toLowerCase();
-						String thisName = a2.getLastName().toLowerCase;
+						String thisName = a2.getLastName().toLowerCase();
 						return compareName.compareTo(thisName);
 					}
 				});

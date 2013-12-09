@@ -18,6 +18,18 @@
         android:textAllCaps="false"
         android:textColor="@color/white" 
         android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+     <EditText
+        android:id="@+id/editStudentFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/studentFirstName"
+        android:layout_below="@+id/studentFirstName"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"  />
+        
+        <requestFocus />
 
 
 
@@ -42,10 +54,9 @@
         android:layout_marginBottom="70dp"
         android:ems="10"
         android:inputType="number"
-        android:textColor="@color/white" >
+        android:textColor="@color/white" />
 
         
-    </EditText>
 
     <CheckBox
         android:id="@+id/checkBoxBroadcastInfo"
@@ -68,18 +79,8 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="@color/white" />
 
-    <EditText
-        android:id="@+id/editStudentFirstName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/studentFirstName"
-        android:layout_below="@+id/studentFirstName"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textColor="@color/white"  />
-    
-    <requestFocus />
-
+   
+        
     <TextView
         android:id="@+id/sectionNumber"
         android:layout_width="wrap_content"

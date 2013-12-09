@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/home_label_recent_alerts"
-            android:textColor="@color/green" />
+            android:textColor="#A4C739" />
  
     </TableRow>
 

@@ -8,18 +8,6 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin" >
 
-    <SearchView
-        android:id="@+id/searchView1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"
-        android:background="@color/silver"
-        android:inputType="text"
-        android:queryHint="@string/search_hint" >
-    </SearchView>
-
     <RelativeLayout
         android:id="@+id/relativeLayout1"
         android:layout_width="wrap_content"
@@ -29,37 +17,31 @@
         android:layout_marginBottom="74dp" >
     </RelativeLayout>
 
+    <ListView
+        android:id="@+id/RSVPListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true" >
+    </ListView>
 
     <TextView
         android:id="@+id/textView1"
         style="@style/GameDayTheme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/searchView1"
-        android:layout_below="@+id/searchView1"
-        android:layout_marginTop="38dp"
+        android:layout_alignLeft="@+id/RSVPListView"
+        android:layout_alignParentTop="true"
+        android:padding="2dp"
         android:paddingLeft="20dp"
-        android:text="@string/search_text"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textStyle="italic" 
-        android:textColor="@color/white"
-       	android:padding="2dp"
         android:shadowColor="@color/silver"
         android:shadowDx="3"
         android:shadowDy="-3"
-        android:shadowRadius="1.5" />
-
-
-
-    <ListView
-        android:id="@+id/RSVPListView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/searchView1"
-        android:layout_alignParentBottom="true"
-        android:layout_below="@+id/textView1" >
-
-    </ListView>
-
+        android:shadowRadius="1.5"
+        android:text="@string/search_text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white"
+        android:textStyle="italic" />
 
 </RelativeLayout>

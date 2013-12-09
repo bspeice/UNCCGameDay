@@ -56,7 +56,7 @@
     <string name="parking_map">Parking Map</string>
     <string name="zoom_map">Parking Map</string>
     <string name="search_hint">Enter and Organization/Person:</string>
-    <string name="search_text">Find who else is attending the UNCC football game! \n \nEnter the name of a person or organization into the search bar above.</string>  
+    <string name="search_text">Find who else is attending the UNCC football game!</string>  
     <string name="button_refresh_alerts">Refresh Alerts</string>
     <string name="rate_lot">Rate Lot:</string>
     <string name="empty_lot">Empty</string>

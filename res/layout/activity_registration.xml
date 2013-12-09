@@ -31,42 +31,30 @@
         
         <requestFocus />
 
+
+
     <Button
-        android:id="@+id/Button1"
+        android:id="@+id/buttonRegister"
+        style="@style/GameDayTheme"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="15dp"
         android:gravity="center_horizontal|center_vertical"
-        android:onClick="onClick"
         android:text="@string/button_register"
-        android:textColor="@color/white"
-        style="?android:attr/buttonStyleSmall"
-        android:background="#488214" />
+        android:textColor="@color/black"
+        android:onClick="onClick"/>
 
     <EditText
         android:id="@+id/editRowNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/Button1"
-        android:layout_alignLeft="@+id/Button1"
+        android:layout_above="@+id/buttonRegister"
+        android:layout_alignLeft="@+id/buttonRegister"
         android:layout_marginBottom="70dp"
         android:ems="10"
         android:inputType="number"
         android:textColor="@color/white" />
-
-        
-
-    <CheckBox
-        android:id="@+id/checkBoxBroadcastInfo"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/Button1"
-        android:layout_alignLeft="@+id/editRowNumber"
-        android:layout_marginBottom="30dp"
-        android:text="@string/check_box_broadcast"
-        android:textColor="@color/white" 
-        style="@style/GameDayTheme"/>
 
     <TextView
         android:id="@+id/studentRow"

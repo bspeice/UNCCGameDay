@@ -16,10 +16,6 @@
         android:theme="@style/AppBaseTheme"
         android:name="com.uncc.gameday.GameDay" >
         <activity
-            android:name="com.uncc.gameday.activities.Alerts"
-            android:label="@string/title_activity_alerts" >
-        </activity>
-        <activity
             android:name="com.uncc.gameday.activities.Parking"
             android:label="@string/title_activity_parking" >
         </activity>

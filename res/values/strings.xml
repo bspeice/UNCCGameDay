@@ -7,12 +7,7 @@
     <string name="title_activity_parking">Parking</string>
     <string name="title_activity_registration">Registration</string>
     <string name="title_acivity_home">Home</string>
-    <string name="title_activity_alerts">Alerts</string>
-    <string name="alerts_label_alerts_to_receive">Select Alerts to Receive:</string>
-    <string name="alerts_check_timed">Timed (Reserve Ticket&#8230;)</string>
     <string name="button_clear_alerts">Clear Alerts</string>
-    <string name="alerts_check_organizations">Organizations</string>
-    <string name="alerts_check_university">University</string>
     <string name="home_label_recent_alerts">Recent Alerts:</string>
     <string name="gameday_handle">UNCCGameDay</string>
     <string name="university_handle">unccharlotte</string>
@@ -56,7 +51,7 @@
     <string name="parking_map">Parking Map</string>
     <string name="zoom_map">Parking Map</string>
     <string name="search_hint">Enter and Organization/Person:</string>
-    <string name="search_text">Find who else is attending the UNCC football game! \n \nEnter the name of a person or organization into the search bar above.</string>  
+    <string name="search_text">Find who else is attending the UNCC football game!</string>  
     <string name="button_refresh_alerts">Refresh Alerts</string>
     <string name="rate_lot">Rate Lot:</string>
     <string name="empty_lot">Empty</string>

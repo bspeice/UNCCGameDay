@@ -41,17 +41,20 @@
       </TableRow>
 
      <LinearLayout
-        android:orientation="vertical"
-        
+        	android:orientation="vertical"
+         	android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
         >
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="0dp"
-            android:layout_gravity="center_horizontal|center"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_gravity="center_horizontal"
             android:layout_weight="2"
             android:orientation="horizontal"
+            android:paddingBottom="@dimen/activity_vertical_margin"
             tools:ignore="UselessParent" >
 
         <Button
@@ -59,7 +62,7 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="32dp"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="center_horizontal|center_vertical"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:background="#488214"
@@ -72,7 +75,7 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="32dp"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="center_horizontal|center_vertical"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:background="#488214"

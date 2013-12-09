@@ -42,9 +42,6 @@ public class MenuActivity extends Activity {
 	@Override
     public boolean onOptionsItemSelected(MenuItem item) {
     	switch (item.getItemId()){
-    		case R.id.action_alert_settings:
-    			startActivity(new Intent(this, Alerts.class));
-    			break;
     		case R.id.action_registration:
     			startActivity(new Intent(this, Registration.class));
     			break;

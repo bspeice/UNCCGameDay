@@ -21,25 +21,25 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class AlertDB extends SQLiteOpenHelper {
         
         /** The Constant DATABASE_VERSION. */
-        private static final int DATABASE_VERSION = 1;
+        public static final int DATABASE_VERSION = 1;
         
         /** The Constant DATABASE_NAME. */
-        private static final String DATABASE_NAME = "AlertDataBase";
+        public static final String DATABASE_NAME = "AlertDataBase";
         
         /** The Constant TABLE_ALERTS. */
-        private static final String TABLE_ALERTS = "alerts";
+        public static final String TABLE_ALERTS = "alerts";
 
         /** The Constant KEY_ALARM_DATE. */
-        private static final String KEY_ALARM_DATE = "alarm_date";
+        public static final String KEY_ALARM_DATE = "alarm_date";
         
         /** The Constant KEY_MESSAGE. */
-        private static final String KEY_MESSAGE = "message";
+        public static final String KEY_MESSAGE = "message";
         
         /** The Constant KEY_SHOWN. */
-        private static final String KEY_SHOWN = "shown";
+        public static final String KEY_SHOWN = "shown";
         
         /** The Constant KEY_TYPE. */
-        private static final String KEY_TYPE = "type";
+        public static final String KEY_TYPE = "type";
         
 
         /**

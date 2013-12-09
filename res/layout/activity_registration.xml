@@ -44,7 +44,7 @@
         android:inputType="number"
         android:textColor="@color/white" >
 
-        <requestFocus />
+        
     </EditText>
 
     <CheckBox
@@ -77,6 +77,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="@color/white"  />
+    
+    <requestFocus />
 
     <TextView
         android:id="@+id/sectionNumber"

@@ -42,9 +42,9 @@
         android:text="@string/search_text"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textStyle="italic" 
-        android:textColor="@color/green"
+        android:textColor="@color/white"
        	android:padding="2dp"
-        android:shadowColor="@color/gold"
+        android:shadowColor="@color/silver"
         android:shadowDx="3"
         android:shadowDy="-3"
         android:shadowRadius="1.5" />

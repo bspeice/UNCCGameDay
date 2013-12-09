@@ -55,7 +55,7 @@ public class LotViewFragment extends DialogFragment {
 		Bundle args = this.getArguments();
 		
 		if (args.containsKey("CHOICE"))
-			pc = ParkingChoice.valueOf(String.valueOf((char[])args.get("CHOICE")));
+			pc = ParkingChoice.valueOf(String.valueOf(args.get("CHOICE")));
 		else
 			pc = ParkingChoice.BLACK;
 		

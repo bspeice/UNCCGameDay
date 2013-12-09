@@ -80,30 +80,4 @@ public class ParkingClient {
 		gds.rateLot(rating, new ParkingLotCallback());
 	}
 	
-	/**
-	 * Get the coordinates for a specific parking lot
-	 *
-	 * @param p the p
-	 * @return the parking lot
-	 */
-	public ParkingLot listLotLocation(ParkingLot p){
-		ParkingCoordinate pc = gds.listLotLocation(p.getLocation().getValue());
-		p.setCoordinate(pc);
-		return p;
-	}
-	
-	/**
-	 * Get the coordinates for a specific parking lot
-	 *
-	 * @param c the c
-	 * @return the parking lot
-	 */
-	public ParkingLot listLotLocation(ParkingChoice c) {
-		ParkingCoordinate pc = gds.listLotLocation(c.getValue());
-		ParkingLot pl = new ParkingLot();
-		pl.setLocation(c);
-		pl.setCoordinate(pc);
-		return pl;
-	}
-	
 }

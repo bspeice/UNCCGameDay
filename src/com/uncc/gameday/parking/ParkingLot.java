@@ -13,9 +13,6 @@ public class ParkingLot {
 	/** The filled_pct. */
 	private int filled_pct;
 	
-	/** The coordinate. */
-	private ParkingCoordinate coordinate;
-	
 	/**
 	 * Gets the filled pct.
 	 *
@@ -52,22 +49,4 @@ public class ParkingLot {
 		this.location = location;
 	}
 	
-	/**
-	 * Gets the coordinate.
-	 *
-	 * @return the coordinate
-	 */
-	public ParkingCoordinate getCoordinate() {
-		return coordinate;
-	}
-	
-	/**
-	 * Sets the coordinate.
-	 *
-	 * @param coordinate the new coordinate
-	 */
-	public void setCoordinate(ParkingCoordinate coordinate) {
-		this.coordinate = coordinate;
-	}
-
 }

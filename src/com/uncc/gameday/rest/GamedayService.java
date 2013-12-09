@@ -8,7 +8,6 @@ import retrofit.http.GET;
 import retrofit.http.POST;
 import retrofit.http.Path;
 
-import com.uncc.gameday.parking.ParkingCoordinate;
 import com.uncc.gameday.parking.ParkingLot;
 import com.uncc.gameday.parking.ParkingRating;
 import com.uncc.gameday.registration.Attendee;
@@ -45,15 +44,6 @@ public interface GamedayService {
 	 */
 	@POST("/lots/rate/")
 	void rateLot(@Body ParkingRating p, Callback<ParkingLot> lot);
-	
-	/**
-	 * List lot location.
-	 *
-	 * @param lot the lot
-	 * @return the parking coordinate
-	 */
-	@GET("/lots/{lot}/")
-	ParkingCoordinate listLotLocation(@Path("lot") String lot);
 	
 	/**
 	 * Gets the user.

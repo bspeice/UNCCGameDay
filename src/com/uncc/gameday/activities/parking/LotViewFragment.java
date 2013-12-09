@@ -108,8 +108,6 @@ public class LotViewFragment extends DialogFragment {
 		public void run() {
 			ParkingClient client = new ParkingClient(f.getActivity());
 			ParkingLot pl = client.listLot(this.pc);
-			ParkingLot pl2 = client.listLotLocation(this.pc);
-			pl.setCoordinate(pl2.getCoordinate());
 			f.initializeData(pl);
 		}
 		

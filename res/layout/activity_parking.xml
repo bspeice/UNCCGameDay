@@ -31,8 +31,6 @@
         android:adjustViewBounds="true"
         android:clickable="true"
         android:contentDescription="@string/parking_map"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
         android:src="@drawable/parking_map" />
 
     <RelativeLayout

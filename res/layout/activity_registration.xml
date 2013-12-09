@@ -31,8 +31,6 @@
         
         <requestFocus />
 
-
-
     <Button
         android:id="@+id/buttonRegister"
         style="@style/GameDayTheme"
@@ -40,10 +38,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="15dp"
+        android:background="#488214"
         android:gravity="center_horizontal|center_vertical"
+        android:onClick="onClick"
         android:text="@string/button_register"
-        android:textColor="@color/black"
-        android:onClick="onClick"/>
+        android:textColor="@color/white" />
 
     <EditText
         android:id="@+id/editRowNumber"
@@ -110,4 +109,5 @@
         android:textColor="@color/white"
         android:textColorHint="@color/black" />
 
+   
 </RelativeLayout>

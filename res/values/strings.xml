@@ -7,12 +7,7 @@
     <string name="title_activity_parking">Parking</string>
     <string name="title_activity_registration">Registration</string>
     <string name="title_acivity_home">Home</string>
-    <string name="title_activity_alerts">Alerts</string>
-    <string name="alerts_label_alerts_to_receive">Select Alerts to Receive:</string>
-    <string name="alerts_check_timed">Timed (Reserve Ticket&#8230;)</string>
     <string name="button_clear_alerts">Clear Alerts</string>
-    <string name="alerts_check_organizations">Organizations</string>
-    <string name="alerts_check_university">University</string>
     <string name="home_label_recent_alerts">Recent Alerts:</string>
     <string name="gameday_handle">UNCCGameDay</string>
     <string name="university_handle">unccharlotte</string>

@@ -1,11 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
     
-    <item android:id="@+id/action_parking" android:title="@string/title_activity_parking" android:icon="@drawable/ic_action_directions" android:orderInCategory="50"></item><item android:id="@+id/action_registration" android:icon="@drawable/ic_action_view_as_list" android:title="@string/title_activity_registration" android:orderInCategory="200"/><item
-        android:id="@+id/action_alert_settings"
-        android:orderInCategory="100"
-        android:showAsAction="ifRoom"
-        android:title="@string/action_alert_settings"
-        android:logo="@drawable/ic_action_settings"/>
+    <item android:id="@+id/action_parking" android:title="@string/title_activity_parking" android:icon="@drawable/ic_action_directions" android:orderInCategory="50"></item><item android:id="@+id/action_registration" android:icon="@drawable/ic_action_view_as_list" android:title="@string/title_activity_registration" android:orderInCategory="200"/>
     <item android:id="@+id/action_search_rsvp" android:title="@string/title_activity_search_rsvp"></item><item android:id="@+id/action_home" android:title="@string/title_acivity_home" android:orderInCategory="350">
     </item>
     

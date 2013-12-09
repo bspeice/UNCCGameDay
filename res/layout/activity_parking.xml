@@ -151,7 +151,6 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentCenter="true"
             android:layout_below="@id/buttonWhite"
             android:layout_centerHorizontal="true"
             android:layout_margin="5dp"
@@ -164,37 +163,9 @@
             android:textSize="12sp"
             android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/buttonGold"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/buttonBlack"
-            android:layout_margin="5dp"
-            android:background="#488214"
-            android:gravity="center"
-            android:onClick="onButtonClick"
-            android:text="@string/gold_lot"
-            android:textColor="@color/white"
-            android:textSize="12sp"
-            android:textStyle="bold" />
+        
 
-        <Button
-            android:id="@+id/buttonSilver"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/buttonGold"
-            android:layout_margin="5dp"
-            android:background="#488214"
-            android:gravity="center"
-            android:onClick="onButtonClick"
-            android:text="@string/silver_lot"
-            android:textColor="@color/white"
-            android:textSize="12sp"
-            android:textStyle="bold" />
+        
 
         <Button
             android:id="@+id/buttonBlack"
@@ -210,5 +181,37 @@
             android:textColor="@color/white"
             android:textSize="12sp"
             android:textStyle="bold" />
+        
+        <Button
+            android:id="@+id/buttonGold"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/buttonBlack"
+            android:layout_margin="5dp"
+            android:background="#488214"
+            android:gravity="center"
+            android:onClick="onButtonClick"
+            android:text="@string/gold_lot"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+        
+        <Button
+            android:id="@+id/buttonSilver"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/buttonGold"
+            android:layout_margin="5dp"
+            android:background="#488214"
+            android:gravity="center"
+            android:onClick="onButtonClick"
+            android:text="@string/silver_lot"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
     </RelativeLayout>
-
+</RelativeLayout>

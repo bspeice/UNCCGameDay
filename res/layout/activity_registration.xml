@@ -44,7 +44,6 @@
         android:text="@string/button_register"
         android:textColor="@color/black"
         android:onClick="onClick"
-        style="?android:attr/buttonStyleSmall"
         android:background="#488214"/>
 
     <EditText

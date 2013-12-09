@@ -56,19 +56,6 @@
         android:inputType="number"
         android:textColor="@color/white" />
 
-        
-
-    <CheckBox
-        android:id="@+id/checkBoxBroadcastInfo"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/buttonRegister"
-        android:layout_alignLeft="@+id/editRowNumber"
-        android:layout_marginBottom="30dp"
-        android:text="@string/check_box_broadcast"
-        android:textColor="@color/white" 
-        style="@style/GameDayTheme"/>
-
     <TextView
         android:id="@+id/studentRow"
         android:layout_width="wrap_content"

@@ -158,7 +158,7 @@ public class AlertDB extends SQLiteOpenHelper {
 		
         	List<Alert> alertList = new ArrayList<Alert>();
 		
-        	String selectQuery = "SELECT  * FROM " + TABLE_ALERTS;
+        	String selectQuery = "SELECT  * FROM " + TABLE_ALERTS + " ORDER BY " + KEY_ALARM_DATE + " DESC;";
 		
         	SQLiteDatabase db = this.getWritableDatabase();
         	Cursor cursor = db.rawQuery(selectQuery, null);

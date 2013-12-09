@@ -48,32 +48,37 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
+            android:layout_gravity="center_horizontal|center"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:layout_weight="2"
-            
-            >
+            android:orientation="horizontal"
+            tools:ignore="UselessParent" >
 
         <Button
             android:id="@+id/clearAlertsButton"
+            style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-			android:background="@drawable/register"
+            android:layout_height="32dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="#488214"
             android:text="@string/button_clear_alerts"
-            android:textColor="@color/black"
-            tools:ignore="ButtonStyle"
-            android:layout_weight="1" />
+            android:textColor="@color/white"
+            tools:ignore="ButtonStyle,NestedWeights" />
 
         <Button
             android:id="@+id/refreshAlertsButton"
+            style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/register"
+            android:layout_height="32dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="#488214"
             android:text="@string/button_refresh_alerts"
-            android:textColor="@color/black"
-            tools:ignore="ButtonStyle" 
-            android:layout_weight="1"/>
-			
+            android:textColor="@color/white"
+            tools:ignore="ButtonStyle" />
 
     </LinearLayout>
     </LinearLayout>
